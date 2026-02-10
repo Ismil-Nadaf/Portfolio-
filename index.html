@@ -38,7 +38,7 @@
         .hero {
             background: var(--gradient);
             color: var(--bg-white);
-            padding: 120px 20px 100px;
+            padding: 90px 20px 90px;
             position: relative;
             overflow: hidden;
         }
@@ -68,7 +68,6 @@
         }
 
         .hero-content {
-            /*max-width: 1100px;*/
             max-width: 100%;
         }
 
@@ -85,8 +84,8 @@
         }
 
         .profile-image {
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 419px;
             border-radius: 5%;
             object-fit: cover;
             border: 5px solid rgba(255, 255, 255, 0.2);
@@ -572,7 +571,7 @@
 
         .tech-image {
             width: 100%;
-            height: 596px;
+            height: 592px;
             object-fit: cover;
             display: block;
         }
@@ -892,7 +891,7 @@
 
         .contact-left {
             flex: 1;
-            max-width: 720px;
+            max-width: 600px;
         }
 
         .contact-left h2 {
@@ -975,7 +974,7 @@
 
         .btn {
             padding: 16px 40px;
-            border-radius: 50px;
+            border-radius: 0px;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
@@ -1378,9 +1377,24 @@
 
         /* Case Study Content */
         .case-study-content {
-            max-width: 900px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 60px 20px 80px;
+            padding: 60px 40px 80px;
+        }
+
+        .case-study-image {
+            width: 100%;
+            margin: 40px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .case-section {
@@ -1430,6 +1444,7 @@
             display: grid;
             gap: 30px;
             margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
 
         .process-step {
@@ -1469,7 +1484,7 @@
         /* Features Grid in Case Study */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 30px;
         }
@@ -1562,6 +1577,10 @@
                 padding: 40px 20px 60px;
             }
 
+            .case-study-content {
+                padding: 40px 20px 60px;
+            }
+
             .case-section h3 {
                 font-size: 26px;
             }
@@ -1610,20 +1629,17 @@
                         </p>
                         <div class="hero-stats">
                             <div class="stat">
-                                <div class="stat-number">14+</div>
+                                <div class="stat-number">14</div>
                                 <div class="stat-label">Years of Digital Innovation</div>
                             </div>
-                            <!--<div class="stat">
-                                <div class="stat-number">$8M+</div>
-                                <div class="stat-label">Revenue Generated</div>
-                            </div>-->
+                            
                             <div class="stat">
                                 <div class="stat-number">Global</div>
                                 <div class="stat-label">Experience</div>
                             </div>
                             <div class="contact-buttons">
-                        
-                        <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" class="btn btn-outline">
+                       
+                        <a href="#" class="btn btn-outline">
                             LinkedIn Profile
                         </a>
                     </div>
@@ -1684,7 +1700,7 @@
                 </div>
                 <div class="about-image-container">
                     <div class="about-image-wrapper">
-                        <img src="img/working on desk.png" alt="Ismil Nadaf - Professional" class="about-image">
+                        <img src="img/working-on-desk.png" alt="Ismil Nadaf - Professional" class="about-image">
                         <div class="about-image-badge">
                             <div class="badge-number">14+</div>
                             <div class="badge-text">Years Experience</div>
@@ -1815,7 +1831,7 @@
             <div class="tech-content-wrapper">
                 <div class="tech-image-container">
                     <div class="tech-image-wrapper">
-                        <img src="img/img2.avif" alt="Technology & Tools" class="tech-image">
+                        <img src="img/tecno and tool-img2.avif" alt="Technology & Tools" class="tech-image">
                         <div class="tech-overlay">
                             <div class="tech-overlay-icon">⚡</div>
                         </div>
@@ -1903,9 +1919,10 @@
                 </p>
             </div>
             <div class="projects-grid">
-        
+                
+
                 <div class="project-card fade-in" onclick="openProject('project4')">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
                         ☁️
                     </div>
                     <div class="project-content">
@@ -1922,7 +1939,7 @@
                 </div>
 
                 <div class="project-card fade-in" onclick="openProject('project5')">
-                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <div class="project-image" style="background: linear-gradient(135deg, rgba(7, 94, 102, 0.9) 0%, rgba(24, 186, 137, 0.9) 100%);">
                         💬
                     </div>
                     <div class="project-content">
@@ -1991,7 +2008,7 @@
 
             <!-- Project 4: Cloud-Based Automated Publishing Platform -->
             <div id="project4" class="project-detail">
-                <div class="project-detail-hero" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(79,172,254,0.9) 0%, rgba(0,242,254,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
                     <div class="container">
                         <span class="project-category">Financial Services • Enterprise Platform</span>
                         <h2>Cloud-Based Automated Publishing Platform</h2>
@@ -2001,10 +2018,15 @@
                 
                 <div class="container">
                     <div class="case-study-content">
+                        <div class="case-study-image">
+                            <img src="img/Apptura-UI-Dashboard.JPG" alt="Cloud-Based Automated Publishing Platform Project">
+                        </div>
                         <div class="case-section">
                             <h3>Project Overview</h3>
                             <p>A comprehensive UX case study showcasing the transformation of complex financial document production through user-centered design and intelligent automation.</p>
                         </div>
+
+                        
 
                         <div class="case-section">
                             <h3>The Challenge</h3>
@@ -2267,7 +2289,7 @@
 
             <!-- Project 5: Conversational Marketing Platform -->
             <div id="project5" class="project-detail">
-                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(250,112,154,0.9) 0%, rgba(254,225,64,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(7, 94, 102, 0.9) 0%, rgba(24, 186, 137, 0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
                     <div class="container">
                         <span class="project-category">Weconnect • AI-Powered Platform</span>
                         <h2>Conversational Marketing Platform</h2>
@@ -2277,6 +2299,9 @@
                 
                 <div class="container">
                     <div class="case-study-content">
+                        <div class="case-study-image">
+                            <img src="img/login screen.png" alt="Conversational Marketing Platform Project">
+                        </div>
                         <div class="case-section">
                             <h3>The Problem</h3>
                             <p>Small and medium businesses struggle to create personalized customer interactions at scale. Existing conversational marketing tools are either too complex (requiring technical expertise) or too basic (lacking customization).</p>
@@ -2310,6 +2335,8 @@
                                 </div>
                             </div>
                         </div>
+
+ 
 
                         <div class="case-section">
                             <h3>Design Process</h3>
@@ -2530,6 +2557,9 @@
                 
                 <div class="container">
                     <div class="case-study-content">
+                            <div class="case-study-image">
+                            <img src="img/Hmat-12.png" alt="Drone-Based High Tension Tower Health Checkup Project">
+                        </div>
                         <div class="case-section">
                             <h3>Project Background</h3>
                             <p>High tension towers are critical infrastructure for transmitting electricity over long distances. Regular health checkups are essential to ensure reliability and safety. However, traditional inspection methods using helicopters or manual climbing are time-consuming, costly, and pose significant safety risks.</p>
@@ -2564,6 +2594,8 @@
                                 </div>
                             </div>
                         </div>
+
+                    
 
                         <div class="case-section">
                             <h3>Design Process</h3>
@@ -2764,16 +2796,21 @@
                     <div class="container">
                         <span class="project-category">Rocket Software • Enterprise Platform</span>
                         <h2>Rocket Uniface UX</h2>
-                        <p class="project-intro">Rocket Uniface is a platform for developing and managing enterprise applications across multiple platforms and databases. It supports web, mobile, desktop, and cloud applications with integration capabilities for web services, LDAP, email, .NET, and Java. </p>
+                        <p class="project-intro">Rocket Uniface is a platform for developing and managing enterprise applications across multiple platforms and databases. It supports web, mobile, desktop, and cloud applications with integration capabilities for web services, LDAP, email, .NET, and Java.</p>
                     </div>
                 </div>
                 
                 <div class="container">
                     <div class="case-study-content">
+                        <div class="case-study-image">
+                            <img src="img/Uniface IDE-01.png" alt="Rocket Uniface UX Project">
+                        </div>
                         <div class="case-section">
                             <h3>Project Overview</h3>
                             <p>Uniface includes a runtime engine, servers, and connectors for distributed environments, plus a pre-configured testing environment. Development is done through the Uniface IDE, which uses ProcScript scripting language and supports JavaScript, XHTML, and CSS. All application definitions are stored in a central Repository.</p>
                         </div>
+
+
 
                         <div class="case-section">
                             <h3>The Challenge</h3>
@@ -3197,7 +3234,7 @@
                         <a href="#" class="btn btn-primary">
                             Email Me
                         </a>
-                        <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" class="btn btn-outline">
+                        <a href="#" class="btn btn-outline">
                             LinkedIn Profile
                         </a>
                     </div>
@@ -3208,7 +3245,7 @@
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <div class="contact-info-label">Email:</div>
-                                <div class="contact-info-value">ismil.xyz@gmail.com</a></div>
+                                <div class="contact-info-value">ismil.xyz@gmail.com</div>
                             </div>
                             <div class="contact-info-item">
                                 <div class="contact-info-label">Phone:</div>
