@@ -1,0 +1,3311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismil Nadaf - Senior Product & UX Design Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A0E27;
+            --accent: #FF6B35;
+            --accent-soft: #FFB088;
+            --text-dark: #1A1A2E;
+            --text-light: #64748B;
+            --bg-light: #F8F9FC;
+            --bg-white: #FFFFFF;
+            --border: #E2E8F0;
+            --gradient: linear-gradient(135deg, #0A0E27 0%, #1A2744 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: var(--bg-white);
+            padding: 120px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, 30px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            /*max-width: 1100px;*/
+            max-width: 100%;
+        }
+
+        .hero-profile-section {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-image-container {
+            flex-shrink: 0;
+            order: 2;
+        }
+
+        .profile-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 5%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .hero-text-content {
+            flex: 1;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(255,107,53,0.2);
+            color: var(--accent-soft);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--accent-soft);
+            font-weight: 500;
+            margin-bottom: 15px;
+            animation: slideUp 0.8s ease-out 0.3s both;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 30px;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.5s both;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Base */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Me Section */
+        .about-content-wrapper {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .about-text-content {
+            flex: 1;
+        }
+
+        .about-description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .highlight-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 20px;
+            background: var(--bg-white);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .highlight-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            border-radius: 10px;
+        }
+
+        .highlight-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .highlight-content p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .about-image-container {
+            flex-shrink: 0;
+            width: 400px;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .about-image-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: var(--gradient);
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .badge-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .badge-text {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Core Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .competency-card {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competency-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.3s ease;
+        }
+
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .competency-card:hover::before {
+            height: 100%;
+        }
+
+        .competency-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .competency-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .competency-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .competency-list li {
+            padding: 0 0 0 20px;
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .competency-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Certifications */
+        .certifications-container {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cert-category {
+            margin-bottom: 30px;
+        }
+
+        .cert-category h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cert-category h3::before {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .cert-item {
+            padding: 12px 0;
+            color: var(--text-light);
+            font-size: 15px;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .cert-item:hover {
+            color: var(--accent);
+            padding-left: 10px;
+        }
+
+        /* Certification Cards */
+        .cert-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: var(--bg-white);
+            padding: 40px 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+
+        .cert-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cert-card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover .cert-card-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .cert-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .cert-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .cert-card-item {
+            padding: 0 0 0 25px;
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            position: relative;
+            border-left: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .cert-card-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cert-card-item:hover {
+            color: var(--text-dark);
+            border-left-color: var(--accent);
+            padding-left: 30px;
+        }
+
+        /* Technology Arsenal */
+        .tech-content-wrapper {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .tech-image-container {
+            flex-shrink: 0;
+            width: 400px;
+        }
+
+        .tech-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .tech-image {
+            width: 100%;
+            height: 596px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tech-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10,14,39,0.85) 0%, rgba(255,107,53,0.85) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tech-image-wrapper:hover .tech-overlay {
+            opacity: 1;
+        }
+
+        .tech-overlay-icon {
+            font-size: 80px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .tech-grid-wrapper {
+            flex: 1;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .tech-category {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .tech-category:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(255,107,53,0.1);
+        }
+
+        .tech-category h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Featured Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::after {
+            content: 'View Project';
+            position: absolute;
+            inset: 0;
+            background: rgba(10,14,39,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-image::after {
+            opacity: 1;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tag {
+            background: var(--bg-light);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Career Timeline - Center Aligned with Alternating Layout */
+        .timeline-center {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline-center::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent), var(--accent-soft));
+            transform: translateX(-50%);
+        }
+
+        .timeline-item-center {
+            position: relative;
+            margin-bottom: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-left {
+            justify-content: flex-start;
+        }
+
+        .timeline-right {
+            justify-content: flex-end;
+        }
+
+        .timeline-content {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            width: calc(50% - 40px);
+            position: relative;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+        }
+
+        .timeline-left .timeline-content {
+            margin-right: auto;
+            text-align: right;
+        }
+
+        .timeline-left .timeline-content::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 20px solid var(--bg-light);
+        }
+
+        .timeline-right .timeline-content {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .timeline-right .timeline-content::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 20px solid var(--bg-light);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border: 4px solid var(--bg-white);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 0 4px rgba(255,107,53,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item-center:hover .timeline-dot {
+            transform: translateX(-50%) scale(1.3);
+            background: var(--accent-soft);
+            box-shadow: 0 0 0 8px rgba(255,107,53,0.3);
+        }
+
+        .timeline-year {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .timeline-company {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .timeline-description {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .contact-layout {
+            display: flex;
+            gap: 80px;
+            align-items: flex-start;
+            padding: 40px 0;
+        }
+
+        .contact-left {
+            flex: 1;
+            max-width: 720px;
+        }
+
+        .contact-left h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-subheading {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--accent-soft);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .contact-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 35px;
+        }
+
+        .contact-right {
+            flex-shrink: 0;
+            width: 400px;
+        }
+
+        .contact-info-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .contact-card-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-info-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-soft);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info-value {
+            font-size: 16px;
+            color: white;
+            font-weight: 400;
+            word-break: break-word;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,107,53,0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Contact */
+        @media (max-width: 968px) {
+            .contact-layout {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            .contact-left {
+                max-width: 100%;
+            }
+
+            .contact-left h2 {
+                font-size: 36px;
+            }
+
+            .contact-subheading {
+                font-size: 20px;
+            }
+
+            .contact-right {
+                width: 100%;
+            }
+
+            .contact-info-card {
+                padding: 30px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.6);
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .hero {
+                padding: 80px 20px 60px;
+            }
+
+            .hero-profile-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .profile-image-container {
+                order: 1;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .hero-stats {
+                gap: 30px;
+                justify-content: center;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            /* About Me Section - Mobile */
+            .about-content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .about-image-container {
+                width: 100%;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .about-image-badge {
+                bottom: 20px;
+                left: 20px;
+                padding: 15px 25px;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .badge-number {
+                font-size: 28px;
+            }
+
+            .highlight-item {
+                padding: 15px;
+            }
+
+            .highlight-item:hover {
+                transform: translateX(5px);
+            }
+
+            .competencies-grid,
+            .tech-grid,
+            .projects-grid,
+            .cert-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Technology Arsenal - Mobile */
+            .tech-content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .tech-image-container {
+                width: 100%;
+            }
+
+            .tech-image {
+                height: 350px;
+            }
+
+            .certifications-container {
+                padding: 30px 20px;
+            }
+
+            .cert-card {
+                padding: 30px 25px;
+            }
+
+            .timeline {
+                padding-left: 30px;
+            }
+
+            /* Timeline Center - Mobile */
+            .timeline-center::before {
+                left: 20px;
+                transform: none;
+            }
+
+            .timeline-item-center {
+                padding-left: 50px;
+            }
+
+            .timeline-left,
+            .timeline-right {
+                justify-content: flex-start;
+            }
+
+            .timeline-content {
+                width: 100%;
+                text-align: left !important;
+            }
+
+            .timeline-left .timeline-content,
+            .timeline-right .timeline-content {
+                margin: 0;
+            }
+
+            .timeline-left .timeline-content::after,
+            .timeline-right .timeline-content::after {
+                left: -20px;
+                right: auto;
+                border-left: none;
+                border-right: 20px solid var(--bg-light);
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+            }
+
+            .timeline-dot {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+
+            .timeline-item-center:hover .timeline-dot {
+                transform: translateX(-50%) scale(1.3);
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-layout {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .contact-left h2 {
+                font-size: 32px;
+            }
+
+            .contact-subheading {
+                font-size: 18px;
+            }
+
+            .contact-right {
+                width: 100%;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger animations */
+        .competency-card:nth-child(1) { animation-delay: 0.1s; }
+        .competency-card:nth-child(2) { animation-delay: 0.2s; }
+        .competency-card:nth-child(3) { animation-delay: 0.3s; }
+        .competency-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .cert-card:nth-child(1) { animation-delay: 0.1s; }
+        .cert-card:nth-child(2) { animation-delay: 0.2s; }
+        .cert-card:nth-child(3) { animation-delay: 0.3s; }
+        .cert-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+        .project-card:nth-child(4) { animation-delay: 0.4s; }
+        .project-card:nth-child(5) { animation-delay: 0.5s; }
+        .project-card:nth-child(6) { animation-delay: 0.6s; }
+        .project-card:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            background-color: rgba(10, 14, 39, 0.95);
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: var(--bg-light);
+            margin: 0 auto;
+            width: 100%;
+            min-height: 100vh;
+            animation: slideInModal 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInModal {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .modal-close:hover {
+            background: var(--accent);
+            color: white;
+            transform: rotate(90deg);
+        }
+
+        .project-detail {
+            display: none;
+        }
+
+        .project-detail.active {
+            display: block;
+        }
+
+        /* Project Detail Hero */
+        .project-detail-hero {
+            padding: 120px 20px 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-detail-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-detail-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .project-intro {
+            font-size: 20px;
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        /* Case Study Content */
+        .case-study-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+        }
+
+        .case-section {
+            margin-bottom: 60px;
+        }
+
+        .case-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .case-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .case-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .case-list li {
+            font-size: 17px;
+            color: var(--text-light);
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .case-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .process-step {
+            background: var(--bg-white);
+            padding: 35px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .step-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .process-step h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Features Grid in Case Study */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,107,53,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 15px;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .impact-stat {
+            text-align: center;
+        }
+
+        .impact-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .impact-label {
+            font-size: 15px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive Modal */
+        @media (max-width: 768px) {
+            .modal-close {
+                top: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .project-detail-hero {
+                padding: 80px 20px 60px;
+            }
+
+            .project-detail-hero h2 {
+                font-size: 36px;
+            }
+
+            .case-study-content {
+                padding: 40px 20px 60px;
+            }
+
+            .case-section h3 {
+                font-size: 26px;
+            }
+
+            .process-steps {
+                gap: 20px;
+            }
+
+            .process-step {
+                padding: 25px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-section {
+                padding: 30px 20px;
+            }
+
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .impact-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-profile-section">
+                    <div class="hero-text-content">
+                        <span class="hero-tag">Senior Product & UX Design Leader</span>
+                        <h1>Ismil Nadaf</h1>
+                        <p class="hero-subtitle">Specialist • Strategist • Designer • Leader</p>
+                        <p class="hero-description">
+                            I firmly believe that technology has the power to revolutionize the way we learn, communicate, and create. 
+                            My mission is to craft products and services that harmoniously bridge the gap between humans and technology, 
+                            empowering individuals to reach their full potential.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">14+</div>
+                                <div class="stat-label">Years of Digital Innovation</div>
+                            </div>
+                            <!--<div class="stat">
+                                <div class="stat-number">$8M+</div>
+                                <div class="stat-label">Revenue Generated</div>
+                            </div>-->
+                            <div class="stat">
+                                <div class="stat-number">Global</div>
+                                <div class="stat-label">Experience</div>
+                            </div>
+                            <div class="contact-buttons">
+                        
+                        <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" class="btn btn-outline">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                        </div>
+                    </div>
+                    <div class="profile-image-container">
+                        <img src="img/Ismil Nadaf.avif" alt="Ismil Nadaf" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Overview -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2>Professional Overview</h2>
+            </div>
+            <div class="about-content-wrapper">
+                <div class="about-text-content">
+                    <p class="about-description">
+                        Over 17 years of industry experience with 14 years exclusively focused on digital transformation across global regions. 
+                        Specialized expertise in human-centric design across diverse business verticals including Software Development, Banking, 
+                        Financial Services, E-commerce, and Healthcare.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-content">
+                                <h4>Human-Centric Design</h4>
+                                <p>14+ years creating intuitive experiences across global markets</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌍</div>
+                            <div class="highlight-content">
+                                <h4>Global Experience</h4>
+                                <p>Delivered solutions across multiple continents and industries</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💼</div>
+                            <div class="highlight-content">
+                                <h4>Multi-Industry Expertise</h4>
+                                <p>Banking, Healthcare, E-commerce, Software Development & more</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📱</div>
+                            <div class="highlight-content">
+                                <h4>Mobile-First Focus</h4>
+                                <p>Specialized in handheld device experiences and responsive design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-container">
+                    <div class="about-image-wrapper">
+                        <img src="img/working on desk.png" alt="Ismil Nadaf - Professional" class="about-image">
+                        <div class="about-image-badge">
+                            <div class="badge-number">14+</div>
+                            <div class="badge-text">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2>Core Competencies</h2>
+            </div>
+            <div class="competencies-grid">
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🎯</div>
+                    <h3>Design Strategy & Leadership</h3>
+                    <ul class="competency-list">
+                        <li>Problem Solving</li>
+                        <li>Design Strategy</li>
+                        <li>UX Management</li>
+                        <li>Mentoring</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🤖</div>
+                    <h3>AI & Innovation</h3>
+                    <ul class="competency-list">
+                        <li>Prompt Engineering</li>
+                        <li>GenUI and VUI Design</li>
+                        <li>Agentic UX Design</li>
+                        <li>Vibe Coding & Interactive Prototyping</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🔬</div>
+                    <h3>Research & Testing</h3>
+                    <ul class="competency-list">
+                        <li>Ethical Research & Analysis</li>
+                        <li>Usability Testing & Mentoring</li>
+                        <li>Accessibility Testing & Mentoring</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <ul class="competency-list">
+                        <li>Requirements Gathering</li>
+                        <li>Feedback & Documentation</li>
+                        <li>Cross-Functional Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Certifications -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2>Professional Certifications</h2>
+                <p class="section-description">
+                    Certified by Interaction Design Foundation, Google, and LinkedIn in cutting-edge UX and AI methodologies.
+                </p>
+            </div>
+            <div class="cert-cards-grid">
+                <div class="cert-card fade-in">
+                    <div class="cert-card-icon">🎓</div>
+                    <h3>UX Leadership</h3>
+                    <div class="cert-card-list">
+                        <div class="cert-card-item">UX Management: Strategy and Tactics</div>
+                        <div class="cert-card-item">Design Thinking</div>
+                        <div class="cert-card-item">Agile Methods for UX Design</div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-card-icon">🤖</div>
+                    <h3>AI Expertise</h3>
+                    <div class="cert-card-list">
+                        <div class="cert-card-item">Google AI Essentials</div>
+                        <div class="cert-card-item">How to Make Your AI Project a Success</div>
+                        <div class="cert-card-item">ChatGPT Prompt Engineering for UX</div>
+                        <div class="cert-card-item">AI for Designers & Design Systems</div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-card-icon">🎨</div>
+                    <h3>UX Fundamentals</h3>
+                    <div class="cert-card-list">
+                        <div class="cert-card-item">User Experience Design</div>
+                        <div class="cert-card-item">Human Computer Interaction</div>
+                        <div class="cert-card-item">Perception and Memory in HCI</div>
+                        <div class="cert-card-item">User Research Methods & Best Practices</div>
+                        <div class="cert-card-item">Conducting Usability Testing</div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-card-icon">♿</div>
+                    <h3>Accessibility & Digital Marketing</h3>
+                    <div class="cert-card-list">
+                        <div class="cert-card-item">Web Design for Accessibility</div>
+                        <div class="cert-card-item">Web Design for Usability</div>
+                        <div class="cert-card-item">Google Fundamentals of Digital Marketing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology & Tools Arsenal -->
+    <section style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tech Stack</span>
+                <h2>Technology & Tools Arsenal</h2>
+            </div>
+            <div class="tech-content-wrapper">
+                <div class="tech-image-container">
+                    <div class="tech-image-wrapper">
+                        <img src="img/img2.avif" alt="Technology & Tools" class="tech-image">
+                        <div class="tech-overlay">
+                            <div class="tech-overlay-icon">⚡</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-grid-wrapper">
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3>Design & Coding</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Adobe XD</span>
+                                <span class="tech-tag">Locofy AI</span>
+                                <span class="tech-tag">Miro AI</span>
+                                <span class="tech-tag">VS Code</span>
+                                <span class="tech-tag">Cursor AI</span>
+                                <span class="tech-tag">GitHub Copilot</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Technology</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Analytics & Testing</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Google Analytics</span>
+                                <span class="tech-tag">Adobe Analytics</span>
+                                <span class="tech-tag">Hotjar</span>
+                                <span class="tech-tag">Maze</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>AI Research</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Microsoft Copilot</span>
+                                <span class="tech-tag">ChatGPT</span>
+                                <span class="tech-tag">Claude AI</span>
+                                <span class="tech-tag">Gemini AI</span>
+                                <span class="tech-tag">Survicate AI</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Accessibility</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Accessible</span>
+                                <span class="tech-tag">Narrator</span>
+                                <span class="tech-tag">JAWS</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3>Project Management</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Jira</span>
+                                <span class="tech-tag">Confluence</span>
+                                <span class="tech-tag">Aha!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2>Featured Projects</h2>
+                <p class="section-description">
+                    Explore a selection of key projects where I've leveraged AI, UX principles, and strategic design to deliver 
+                    impactful digital solutions across various industries.
+                </p>
+            </div>
+            <div class="projects-grid">
+        
+                <div class="project-card fade-in" onclick="openProject('project4')">
+                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        ☁️
+                    </div>
+                    <div class="project-content">
+                        <h3>Cloud-Based Automated Publishing Platform</h3>
+                        <p class="project-description">
+                            A cloud-based automated publishing platform enabling financial services teams to create complex, data-intensive documents with minimal manual intervention.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Financial Services</span>
+                            <span class="project-tag">78% Time Savings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('project5')">
+                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        💬
+                    </div>
+                    <div class="project-content">
+                        <h3>Conversational Marketing Platform</h3>
+                        <p class="project-description">
+                            Weconnect - an intuitive AI-powered customer engagement platform that helps businesses improve customer support, lead generation, and communication through chatbots and live chat.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">AI-Powered</span>
+                            <span class="project-tag">No-Code Platform</span>
+                            <span class="project-tag">78% Activation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('project6')">
+                    <div class="project-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        🚁
+                    </div>
+                    <div class="project-content">
+                        <h3>Drone-Based High Tension Tower Health Checkup</h3>
+                        <p class="project-description">
+                            A comprehensive user-centered design for critical infrastructure inspection, transforming traditional methods through innovative drone technology and intelligent software solutions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Industrial UX</span>
+                            <span class="project-tag">Drone Technology</span>
+                            <span class="project-tag">75% Faster</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openProject('project7')">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        🚀
+                    </div>
+                    <div class="project-content">
+                        <h3>Rocket Uniface UX</h3>
+                        <p class="project-description">
+                            A comprehensive low-code platform solution built on Fluent Design System, transforming enterprise application development with modern UX and flexible widget framework.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Enterprise Platform</span>
+                            <span class="project-tag">Low-Code</span>
+                            <span class="project-tag">65% Faster Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProject()">&times;</button>
+            
+            <!-- Project 1: Enterprise Design System -->
+            
+
+            <!-- Project 2: AI Machine Learning System -->
+            
+
+            <!-- Project 3: $8M Revenue Solutions -->
+            
+
+            <!-- Project 4: Cloud-Based Automated Publishing Platform -->
+            <div id="project4" class="project-detail">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(168,237,234,0.9) 0%, rgba(254,214,227,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                    <div class="container">
+                        <span class="project-category">Financial Services • Enterprise Platform</span>
+                        <h2>Cloud-Based Automated Publishing Platform</h2>
+                        <p class="project-intro">A cloud-based automated publishing platform that enables financial services teams to create, edit, and update complex, data-intensive documents like fund fact sheets, quarterly reports, and marketing collateral with minimal manual intervention.</p>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="case-study-content">
+                        <div class="case-section">
+                            <h3>Project Overview</h3>
+                            <p>A comprehensive UX case study showcasing the transformation of complex financial document production through user-centered design and intelligent automation.</p>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>The Challenge</h3>
+                            <p>Financial services teams struggled with creating complex, data-intensive documents like fund fact sheets and quarterly reports. Manual processes took 5-7 hours per document with high error rates.</p>
+                            
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px; border-left: 4px solid var(--accent);">
+                                <h4 style="margin-bottom: 20px; font-size: 20px;">User Pain Points</h4>
+                                <div style="margin-bottom: 20px;">
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 8px;">"I spend 4 hours copying data from Bloomberg into InDesign. One error and I lose client trust."</p>
+                                    <p style="font-size: 14px; color: var(--text-light);">— Investment Analyst</p>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 8px;">"I can't tell what changed between versions without comparing PDFs line by line."</p>
+                                    <p style="font-size: 14px; color: var(--text-light);">— Compliance Officer</p>
+                                </div>
+                                <div>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 8px;">"Updating 200+ templates when branding changes takes 3 weeks."</p>
+                                    <p style="font-size: 14px; color: var(--text-light);">— Marketing Operations Manager</p>
+                                </div>
+                                <p style="margin-top: 25px; font-weight: 600; color: var(--accent);">Impact: 5-7 hours per document, 8-10 day cycles, unable to scale without adding headcount.</p>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Design Process</h3>
+                            
+                            <h4 style="font-size: 24px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Research</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎤</div>
+                                    <h4>In-Depth Interviews</h4>
+                                    <p>Conducted 18 interviews across 4 financial institutions to understand pain points and workflows.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">👀</div>
+                                    <h4>Contextual Inquiry</h4>
+                                    <p>Shadowed 12 users during actual document production to observe real-world challenges.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📊</div>
+                                    <h4>Data Analysis</h4>
+                                    <p>Analyzed 450+ support tickets and feature requests from legacy systems.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📔</div>
+                                    <h4>Diary Studies</h4>
+                                    <p>Tracked 8 participants over 2 weeks to capture pain points in their daily workflow.</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Key Insights</h4>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">01</div>
+                                    <h4>Trust Through Transparency</h4>
+                                    <p>Users wouldn't trust automation unless they could see and verify data sources. The "black box" problem was the biggest barrier to adoption.</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">02</div>
+                                    <h4>Control vs. Automation Paradox</h4>
+                                    <p>While users wanted automation, they also feared losing control. They needed the ability to override automated decisions without breaking the entire system.</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">03</div>
+                                    <h4>Context Switching Kills Productivity</h4>
+                                    <p>Users toggled between 5-7 different tools during document production. Each context switch added cognitive load and increased error risk.</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">04</div>
+                                    <h4>Collaboration is Asynchronous and Global</h4>
+                                    <p>Teams span multiple time zones. Real-time collaboration wasn't as important as clear status visibility and asynchronous feedback mechanisms.</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Design Principles</h4>
+                            <p>Based on our research, we established core principles:</p>
+                            <ul class="case-list">
+                                <li>Transparent by default</li>
+                                <li>Forgiving and reversible</li>
+                                <li>Context over clicks</li>
+                                <li>Progressive disclosure</li>
+                                <li>Clarity over cleverness</li>
+                            </ul>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Testing (5 rounds)</h4>
+                            <p>Created low-fidelity wireframes and high-fidelity prototypes to visualize the application's layout, navigation, and key features.</p>
+                            <ul class="case-list">
+                                <li>Low fid prototypes → 12 users</li>
+                                <li>High fid Interactive Figma → 15 users</li>
+                                <li>Functional beta → 25 users across 5 clients</li>
+                            </ul>
+                            <p style="margin-top: 20px;"><strong>Critical Iteration:</strong> Data Field Inspector evolved through 4 versions. Final version (icon + hover popover) achieved 85% discoverability vs 20% in early versions.</p>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Meet Our Users: Three Core Personas</h3>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">👩‍💼</div>
+                                    <h4>Sarah Chen - The Data Analyst</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 12px;">Age: 32 | Role: Senior Investment Analyst</p>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 15px;">"I spend 4 hours every month copying data into templates. I'm terrified of errors."</p>
+                                    <p><strong>Goals:</strong> Produce accurate reports without manual data entry, meet deadlines without weekend work.</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👨‍💼</div>
+                                    <h4>Michael Rodriguez - The Compliance Guardian</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 12px;">Age: 45 | Role: Compliance Officer</p>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 15px;">"I can't tell what changed between versions without comparing PDFs line by line."</p>
+                                    <p><strong>Goals:</strong> Verify compliance quickly, maintain audit trails, prevent non-compliant documents.</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👩‍💻</div>
+                                    <h4>Jennifer Park - The Template Administrator</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 12px;">Age: 38 | Role: Marketing Operations Manager</p>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-bottom: 15px;">"When our logo changes, I manually update 200+ files. Setting up templates takes weeks."</p>
+                                    <p><strong>Goals:</strong> Update templates efficiently, ensure teams use approved versions, scale processes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>The Solution</h3>
+                            <p>Automated publishing platform with intelligent workflows, data verification, and real-time collaboration.</p>
+
+                            <div class="features-grid" style="margin-top: 30px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔍</div>
+                                    <h4>Data Field Inspector</h4>
+                                    <p>Hover over any field to see data source, freshness timestamp, and transformation rules. One-click override option.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Transparency builds trust. Users verify data instantly without leaving context, reducing manual checking by 67%.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎨</div>
+                                    <h4>Smart Template Editor</h4>
+                                    <p>Drag-and-drop visual builder with live preview, pre-built components, and natural language conditional rules.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Non-technical users create templates without IT support. 4 hours → 45 minutes.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📋</div>
+                                    <h4>Unified Review Dashboard</h4>
+                                    <p>Kanban-style view showing all documents, status, priorities, and actions. Embedded preview and one-click approvals.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Eliminates context switching. SLA indicators prioritize urgent work. 34% faster cycle times.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔄</div>
+                                    <h4>Intelligent Change Tracking</h4>
+                                    <p>Side-by-side diff view highlighting only data/content changes, ignoring formatting noise.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Focuses attention on what matters. Review time: 25 min → 8 min. 43% more errors caught.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚙️</div>
+                                    <h4>Automated Workflow Engine</h4>
+                                    <p>Rule-based routing with notifications, parallel approvals, and complete audit trails.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Zero manual coordination. Auto-escalation prevents bottlenecks. Full compliance tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section impact-section">
+                            <h3>Impact & Results</h3>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Time Savings</h4>
+                            <div class="impact-stats" style="margin-bottom: 40px;">
+                                <div class="impact-stat">
+                                    <div class="impact-number">78%</div>
+                                    <div class="impact-label">Document Creation Faster (5-7 hrs → 1.5 hrs)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">68%</div>
+                                    <div class="impact-label">Review Time Faster (25 min → 8 min)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">81%</div>
+                                    <div class="impact-label">Template Creation Faster (4 hrs → 45 min)</div>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 22px; margin-bottom: 20px; color: var(--text-dark);">Quality</h4>
+                            <div class="impact-stats" style="margin-bottom: 40px;">
+                                <div class="impact-stat">
+                                    <div class="impact-number">89%</div>
+                                    <div class="impact-label">Errors Reduction (7.2% → 0.8%)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">0</div>
+                                    <div class="impact-label">Corrected Reissuances Post-Launch</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">43%</div>
+                                    <div class="impact-label">More Compliance Errors Caught</div>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 22px; margin-bottom: 20px; color: var(--text-dark);">Business Impact</h4>
+                            <div class="impact-stats">
+                                <div class="impact-stat">
+                                    <div class="impact-number">$2.3M</div>
+                                    <div class="impact-label">Annual Cost Savings</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">40%</div>
+                                    <div class="impact-label">Faster Client Onboarding</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">18</div>
+                                    <div class="impact-label">New Funds Launched (No Headcount Added)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">92%</div>
+                                    <div class="impact-label">Feature Adoption (Month 1)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">81/100</div>
+                                    <div class="impact-label">SUS Score (Up from 52)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>User Feedback</h3>
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px;">
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"I finally have time to analyze data instead of copying it around. The data inspector changed everything."</p>
+                                </div>
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"Review time dropped from 25 minutes to 8. I catch more errors because I'm not distracted by formatting noise."</p>
+                                </div>
+                                <div>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"We launched 8 new funds last quarter without adding staff."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Key Learnings</h3>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What Worked</h4>
+                            <ul class="case-list">
+                                <li><strong>Transparency overcame resistance</strong> - Making automation visible increased adoption from 34% to 92%</li>
+                                <li><strong>Progressive disclosure served all skill levels</strong> - Basic/Advanced modes satisfied both novices and power users</li>
+                                <li><strong>Early, frequent testing</strong> - 5 testing rounds caught critical issues before they became expensive</li>
+                            </ul>
+
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What I'd Improve</h4>
+                            <ul class="case-list">
+                                <li>Involve compliance stakeholders earlier (saved 3 weeks of rework)</li>
+                                <li>Test with real data from day 1 (revealed 12 edge cases we'd missed)</li>
+                                <li>Plan for mobile use cases upfront (became major pain point later)</li>
+                            </ul>
+
+                            <div style="background: var(--bg-white); padding: 35px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Core Takeaway</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Enterprise users will embrace automation if you make it transparent, controllable, and reversible. Trust comes from seeing the "why" behind every automated decision.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Conversational Marketing Platform -->
+            <div id="project5" class="project-detail">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(250,112,154,0.9) 0%, rgba(254,225,64,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                    <div class="container">
+                        <span class="project-category">Weconnect • AI-Powered Platform</span>
+                        <h2>Conversational Marketing Platform</h2>
+                        <p class="project-intro">Weconnect - an intuitive AI-powered customer engagement platform that helps businesses improve customer support, lead generation, and other communication with a blend of AI (ChatGPT) chatbots, rule-based systems, and human touch through a live and video chat-enabled multi-channel agent dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="case-study-content">
+                        <div class="case-section">
+                            <h3>The Problem</h3>
+                            <p>Small and medium businesses struggle to create personalized customer interactions at scale. Existing conversational marketing tools are either too complex (requiring technical expertise) or too basic (lacking customization).</p>
+                            <p><strong>Business Problem:</strong> An intuitive drag-and-drop platform that democratizes conversational marketing, allowing any business user to build engaging chatbots, live chat experiences, and automated conversations.</p>
+                            
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px; border-left: 4px solid var(--accent);">
+                                <h4 style="margin-bottom: 20px; font-size: 20px;">User Pain Points</h4>
+                                <p style="font-size: 15px; color: var(--text-light); margin-bottom: 20px;">From User Research (15 in-depth interviews, 120 survey responses):</p>
+                                
+                                <div class="features-grid" style="margin-top: 20px;">
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Technical Barriers</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"I have great ideas for customer engagement, but I need a developer for everything."</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Fragmented Tools</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"We use five different tools for chat, email, and social. Nothing talks to each other."</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Poor Customer Insights</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"We don't know what our customers want until they complain."</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Time-Consuming Setup</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"By the time we launch a campaign, the moment has passed."</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Lack of Personalization</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"Everyone gets the same generic message. It feels robotic."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Design Process</h3>
+                            
+                            <h4 style="font-size: 24px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Research & Validation</h4>
+                            <ul class="case-list">
+                                <li><strong>Competitive Analysis</strong> – Studied 8 platforms (Drift, Intercom, ManyChat, HubSpot)</li>
+                                <li><strong>User Interviews</strong> – 15 in-depth sessions with target personas</li>
+                                <li><strong>Contextual Inquiry</strong> – Shadowed 6 users setting up existing tools</li>
+                                <li><strong>Surveys</strong> – 120 responses from marketing professionals</li>
+                            </ul>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Testing & Iteration</h4>
+                            <ul class="case-list">
+                                <li><strong>Round 1 (Lo-Fidelity)</strong> – 8 users tested flowchart approach → Too complex, switched to blocks</li>
+                                <li><strong>Round 2 (Mid-Fidelity)</strong> – 12 users tested templates → Added persistent preview panel</li>
+                                <li><strong>Round 3 (Hi-Fidelity)</strong> – 15 users completed full workflows → 93% task completion, SUS score 84</li>
+                                <li><strong>Beta Program</strong> – 50 businesses over 4 weeks → Final refinements based on real usage</li>
+                            </ul>
+
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Key Insight</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Users abandon tools within 15 minutes if they can't create something meaningful. Templates + simplicity = activation.</p>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Research Insights</h4>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">01</div>
+                                    <h4>Simplicity Wins Trust</h4>
+                                    <p>Users abandon platforms within 15 minutes if they can't create something meaningful</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">02</div>
+                                    <h4>Visual Learning</h4>
+                                    <p>89% of users prefer drag-and-drop builders over configuration panels</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">03</div>
+                                    <h4>Templates Matter</h4>
+                                    <p>Users need starting points, not blank canvases</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">04</div>
+                                    <h4>Preview is Critical</h4>
+                                    <p>Users want to test conversations before launching</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">05</div>
+                                    <h4>Integration Anxiety</h4>
+                                    <p>Fear of breaking existing systems prevents adoption</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Design Principles</h4>
+                            <p>Based on our research, we established core principles:</p>
+                            <div class="features-grid" style="margin-top: 20px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🚫</div>
+                                    <h4>No-Code First</h4>
+                                    <p>If it requires technical knowledge, redesign it</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🧭</div>
+                                    <h4>Guided Discovery</h4>
+                                    <p>Progressive disclosure of complexity</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚡</div>
+                                    <h4>Instant Gratification</h4>
+                                    <p>Users should create value in under 5 minutes</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">💬</div>
+                                    <h4>Conversation-Centric</h4>
+                                    <p>Think in dialogues, not features</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Meet Our Users: Core Personas</h3>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">👩‍💼</div>
+                                    <h4>Primary Persona: Marketing Manager Maria</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-top: 10px;">"I want to engage with my website visitors instantly, but I don't know how to code."</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👨‍💼</div>
+                                    <h4>Secondary Persona: Small Business Owner Sam</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); margin-top: 10px;">"I'm losing customers because I can't respond fast enough, but enterprise tools are too expensive and complex."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>The Solution</h3>
+                            <p>An intuitive, no-code platform that democratizes conversational marketing through visual design and smart automation.</p>
+
+                            <div class="features-grid" style="margin-top: 30px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎨</div>
+                                    <h4>Visual Conversation Builder</h4>
+                                    <p>Drag-and-drop interface that makes conversation logic visual and accessible</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Users think in conversations, not code. The visual flow mirrors natural dialogue patterns.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📚</div>
+                                    <h4>Smart Template Library</h4>
+                                    <p>40+ pre-built, industry-specific templates that users can customize</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Starting from a template reduced setup anxiety by 85% and gave users immediate confidence.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔌</div>
+                                    <h4>One-Click Integrations</h4>
+                                    <p>Connect major platforms without technical setup</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Removed the fear of "breaking something" that prevented adoption.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📊</div>
+                                    <h4>Actionable Analytics</h4>
+                                    <p>Insights in plain language, not just data dumps</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Non-analysts could finally understand and act on their data.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section impact-section">
+                            <h3>Results & Impact</h3>
+                            <p>Weconnect empowers businesses with tangible improvements in customer engagement and operational efficiency. Our platform delivers measurable success, from boosted lead capture to elevated customer satisfaction.</p>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Key Performance Indicators</h4>
+                            <div class="impact-stats">
+                                <div class="impact-stat">
+                                    <div class="impact-number">2,450</div>
+                                    <div class="impact-label">Businesses Signed Up (First 3 Months)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">78%</div>
+                                    <div class="impact-label">Activation Rate (Users Created First Conversation)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">40%</div>
+                                    <div class="impact-label">Lead Capture Increase (Customer Average)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">35%</div>
+                                    <div class="impact-label">Support Tickets Reduced</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">86</div>
+                                    <div class="impact-label">SUS Score (Well Above Industry Average)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>User Testimonials</h3>
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px;">
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"I went from 'I have no idea' to having a live chatbot in under an hour. Game-changer."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Sarah K., E-commerce Owner</p>
+                                </div>
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"Finally, a tool that doesn't require begging the dev team for help."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Marcus T., Marketing Manager</p>
+                                </div>
+                                <div>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"The templates gave me ideas I wouldn't have thought of. Now our conversations feel personal, not pushy."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Jennifer L., Customer Success Lead</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Key Learnings</h3>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What Worked</h4>
+                            <ul class="case-list">
+                                <li>Template-first approach dramatically reduced setup anxiety and time</li>
+                                <li>Visual builder made complex logic accessible to non-technical users</li>
+                                <li>Continuous user testing caught issues before launch</li>
+                                <li>Progressive disclosure balanced simplicity with power</li>
+                            </ul>
+
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What I'd Do Differently</h4>
+                            <ul class="case-list">
+                                <li>Launch beta program earlier to capture real-world edge cases</li>
+                                <li>Create different onboarding paths for different user types</li>
+                                <li>Prioritize mobile app development sooner</li>
+                                <li>Build migration tools for users switching from other platforms</li>
+                            </ul>
+
+                            <div style="background: var(--bg-white); padding: 35px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Core Takeaway</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin-bottom: 15px;">The hardest challenge was resisting feature creep. Stakeholders wanted to match enterprise tools feature-for-feature, but our users needed something fundamentally different—simplicity with strategic depth, not comprehensive complexity.</p>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Success came from discipline: staying focused on core personas, ruthlessly prioritizing based on jobs-to-be-done, and validating every assumption through testing.</p>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 40px; padding: 30px; background: var(--bg-light); border-radius: 12px;">
+                                <p style="font-style: italic; font-size: 20px; color: var(--text-dark); line-height: 1.6; margin: 0;">"Great interactions build great relationships, great relationships build great businesses, and great companies build great stories."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Drone-Based High Tension Tower Health Checkup -->
+            <div id="project6" class="project-detail">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(48,207,208,0.9) 0%, rgba(51,8,103,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                    <div class="container">
+                        <span class="project-category">Infrastructure • Drone Technology</span>
+                        <h2>Drone-Based High Tension Tower Health Checkup</h2>
+                        <p class="project-intro">A comprehensive case study showcasing user-centered design for critical infrastructure inspection, transforming traditional methods through innovative drone technology and intelligent software solutions.</p>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="case-study-content">
+                        <div class="case-section">
+                            <h3>Project Background</h3>
+                            <p>High tension towers are critical infrastructure for transmitting electricity over long distances. Regular health checkups are essential to ensure reliability and safety. However, traditional inspection methods using helicopters or manual climbing are time-consuming, costly, and pose significant safety risks.</p>
+                            
+                            <h4 style="font-size: 24px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Problem Statement</h4>
+                            <p>Design a user-friendly and efficient drone-based application for high tension tower health checkups, enabling inspectors to accurately identify potential issues and prioritize maintenance.</p>
+                            
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px; border-left: 4px solid var(--accent);">
+                                <h4 style="margin-bottom: 20px; font-size: 20px;">Pain Points</h4>
+                                
+                                <div class="features-grid" style="margin-top: 20px;">
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Safety Risks</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px; margin-bottom: 8px;">"Every time we climb those towers, we're putting our lives at risk. One wrong move and it's over."</p>
+                                        <p style="font-size: 14px; color: var(--text-light);">— Tower Inspector</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">High Costs</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px; margin-bottom: 8px;">"Helicopter inspections cost us thousands per tower, and we have hundreds to inspect annually."</p>
+                                        <p style="font-size: 14px; color: var(--text-light);">— Maintenance Manager</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Time Inefficiency</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px; margin-bottom: 8px;">"A single tower inspection takes 4-6 hours. We're constantly behind schedule."</p>
+                                        <p style="font-size: 14px; color: var(--text-light);">— Lead Engineer</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Limited Data Quality</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px; margin-bottom: 8px;">"By the time we spot a defect during manual inspection, it's often already critical."</p>
+                                        <p style="font-size: 14px; color: var(--text-light);">— Field Inspector</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Design Process</h3>
+                            <p>Conducted comprehensive research to understand current pain points, workflows, and requirements through multiple methodologies.</p>
+                            
+                            <h4 style="font-size: 24px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Research Phase</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎤</div>
+                                    <h4>Stakeholder Interviews</h4>
+                                    <p>Conducted interviews with tower inspectors, maintenance teams, and engineers to understand current pain points, workflows, and requirements.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">👀</div>
+                                    <h4>Observational Studies</h4>
+                                    <p>Observed inspectors conducting traditional tower inspections to identify inefficiencies and areas for improvement.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📊</div>
+                                    <h4>Surveys</h4>
+                                    <p>Distributed surveys to inspectors and maintenance teams to gather feedback on the proposed drone-based solution.</p>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Key Research Insight</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Inspectors needed a solution that worked seamlessly in field conditions with minimal training requirements.</p>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">User-Centered Design Principles</h4>
+                            <p>Based on our research, we established core principles:</p>
+                            <div class="features-grid" style="margin-top: 20px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">✨</div>
+                                    <h4>Simplicity First</h4>
+                                    <p>Reduced cognitive load through intuitive navigation and clear visual hierarchy</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🌍</div>
+                                    <h4>Field-Optimized</h4>
+                                    <p>Designed for outdoor visibility and touch-friendly controls with gloves</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔍</div>
+                                    <h4>Data Transparency</h4>
+                                    <p>Made AI detection results explainable with visual annotations</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔄</div>
+                                    <h4>Workflow Integration</h4>
+                                    <p>Aligned with existing inspection protocols to minimize disruption</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Testing & Iteration</h4>
+                            <p>Created low-fidelity wireframes and high-fidelity prototypes to visualize the application's layout, navigation, and key features.</p>
+                            <div class="process-steps" style="margin-top: 20px;">
+                                <div class="process-step">
+                                    <div class="step-number">01</div>
+                                    <h4>Round 1</h4>
+                                    <p>Initial prototype testing revealed navigation complexity — simplified menu structure by 40%</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">02</div>
+                                    <h4>Round 2</h4>
+                                    <p>Data analysis interface was overwhelming — introduced progressive disclosure and contextual help</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">03</div>
+                                    <h4>Round 3</h4>
+                                    <p>Reporting workflow had too many steps — reduced from 7 clicks to 3 clicks</p>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Iteration Impact</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Usability satisfaction score improved from 62% to 88% across three testing rounds.</p>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Design Solution</h3>
+                            <p>A drone-based inspection application that transforms tower health monitoring through five key features:</p>
+
+                            <div class="features-grid" style="margin-top: 30px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">📊</div>
+                                    <h4>Centralized Inspector Dashboard</h4>
+                                    <p>Consolidates all tower data, inspection history, and maintenance schedules in one view, eliminating the need to switch between multiple systems and reducing pre-inspection planning time by 60%.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Single source of truth for all inspection data</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🚁</div>
+                                    <h4>Integrated Drone Control Interface</h4>
+                                    <p>Real-time drone deployment and flight control with automated flight paths ensures consistent coverage of all tower components, reducing human error and inspection time from hours to 30 minutes.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Automated precision reduces inspection time by 75%</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🤖</div>
+                                    <h4>AI-Enhanced Data Analysis Tools</h4>
+                                    <p>Automated defect detection algorithms analyze high-resolution imagery instantly, identifying corrosion, cracks, and structural anomalies that human eyes might miss, improving detection accuracy by 40%.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: AI catches what humans miss</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📝</div>
+                                    <h4>Template-Based Reporting System</h4>
+                                    <p>Pre-configured report templates with auto-populated inspection data cut report generation time from 2 hours to 15 minutes, enabling faster decision-making.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Instant reports enable same-day decisions</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚠️</div>
+                                    <h4>Maintenance Prioritization Engine</h4>
+                                    <p>Automatically categorizes defects by severity and schedules maintenance, ensuring critical issues are addressed first and reducing tower downtime by 35%.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Critical issues get immediate attention</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section impact-section">
+                            <h3>Impact & Results (Quantitative Metrics)</h3>
+                            
+                            <div class="impact-stats">
+                                <div class="impact-stat">
+                                    <div class="impact-number">55%</div>
+                                    <div class="impact-label">Customer Success Rate in Implementation</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">60%</div>
+                                    <div class="impact-label">Reduction in Pre-Inspection Planning Time</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">75%</div>
+                                    <div class="impact-label">Faster Inspection (6 hours → 90 minutes)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">40%</div>
+                                    <div class="impact-label">Improvement in Defect Detection Accuracy</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">35%</div>
+                                    <div class="impact-label">Decrease in Tower Downtime</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">85%</div>
+                                    <div class="impact-label">Cost Savings vs Helicopter Inspections</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Qualitative Feedback</h3>
+                            <p>The final dashboard provides comprehensive tools for managing inspections, analyzing data, and generating reports with an intuitive, user-friendly interface.</p>
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px;">
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"This app has completely changed how we work. What used to take all day now takes an hour, and we're catching issues we would have missed."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Senior Inspector</p>
+                                </div>
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"The safety improvement alone justifies the investment. Our team feels much more confident going into inspections."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Operations Director</p>
+                                </div>
+                                <div>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"The reporting feature is a game-changer. We can now make maintenance decisions the same day as inspection."</p>
+                                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">— Engineering Manager</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Key Learnings</h3>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What Worked</h4>
+                            <ul class="case-list">
+                                <li><strong>Co-creation with users:</strong> Daily stakeholder collaboration (30% project impact) ensured the solution addressed real needs, not assumed ones</li>
+                                <li><strong>Iterative testing:</strong> Continuous user feedback (25% project impact) prevented costly late-stage redesigns</li>
+                                <li><strong>Progressive complexity:</strong> Starting with core workflows and adding advanced features incrementally increased adoption</li>
+                            </ul>
+
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What to Improve</h4>
+                            <ul class="case-list">
+                                <li><strong>Offline functionality:</strong> Field inspectors often work in areas with limited connectivity — need robust offline mode</li>
+                                <li><strong>Training materials:</strong> While intuitive, comprehensive video tutorials would accelerate onboarding for less tech-savvy users</li>
+                                <li><strong>Cross-platform consistency:</strong> Tablet and mobile experiences need better parity for field flexibility</li>
+                            </ul>
+
+                            <div style="background: var(--bg-white); padding: 35px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Core Takeaway</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Success in industrial UX design comes from spending more time in users' shoes than at your desk. The 55% success rate and overwhelmingly positive feedback stemmed directly from embedding with inspectors during research, validating assumptions through testing, and ruthlessly prioritizing features that saved time and lives over features that looked impressive in demos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7: Rocket Uniface UX -->
+            <div id="project7" class="project-detail">
+                <div class="project-detail-hero" style="background: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.9) 100%), url('Ismil_Nadaf.avif'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                    <div class="container">
+                        <span class="project-category">Rocket Software • Enterprise Platform</span>
+                        <h2>Rocket Uniface UX</h2>
+                        <p class="project-intro">Rocket Uniface is a platform for developing and managing enterprise applications across multiple platforms and databases. It supports web, mobile, desktop, and cloud applications with integration capabilities for web services, LDAP, email, .NET, and Java.</p>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="case-study-content">
+                        <div class="case-section">
+                            <h3>Project Overview</h3>
+                            <p>Uniface includes a runtime engine, servers, and connectors for distributed environments, plus a pre-configured testing environment. Development is done through the Uniface IDE, which uses ProcScript scripting language and supports JavaScript, XHTML, and CSS. All application definitions are stored in a central Repository.</p>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>The Challenge</h3>
+                            <p>While Uniface effectively managed backend processes, it lacked a modern front-end solution, creating significant challenges for customers.</p>
+                            
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px; border-left: 4px solid var(--accent);">
+                                <h4 style="margin-bottom: 20px; font-size: 20px;">Clear Pain Points</h4>
+                                
+                                <div class="features-grid" style="margin-top: 20px;">
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Outdated Design System</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"The existing UX widgets are limited to basic HTML standards without any modern design capabilities."</p>
+                                        <p style="font-size: 14px; color: var(--text-light); margin-top: 8px;">— Product Team</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">Integration Complexity</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"We're forced to integrate multiple third-party libraries, which introduces style leakage from CSS frameworks and creates maintenance nightmares."</p>
+                                        <p style="font-size: 14px; color: var(--text-light); margin-top: 8px;">— Developer</p>
+                                    </div>
+                                    <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                                        <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text-dark);">High Costs & Maintenance</h4>
+                                        <p style="font-style: italic; color: var(--text-dark); font-size: 15px;">"The licensing fees for paid libraries and constant versioning issues are eating into our budget and development time."</p>
+                                        <p style="font-size: 14px; color: var(--text-light); margin-top: 8px;">— Architect</p>
+                                    </div>
+                                </div>
+
+                                <h4 style="font-size: 20px; margin-top: 30px; margin-bottom: 15px;">Key Challenges:</h4>
+                                <ul class="case-list">
+                                    <li>No cohesive design system</li>
+                                    <li>CSS style leakage across frameworks</li>
+                                    <li>Expensive third-party library dependencies</li>
+                                    <li>Complex licensing and versioning maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Design Process</h3>
+                            
+                            <h4 style="font-size: 24px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">Research</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">❤️</div>
+                                    <h4>Empathy Mapping</h4>
+                                    <p>Mapped what users say, think, do, and feel to uncover emotional drivers and the gap between needed flexibility and outdated HTML widgets.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎤</div>
+                                    <h4>User Interviews</h4>
+                                    <p>Conducted in-depth conversations with architects, developers, and designers, revealing consistent pain points around integration challenges, licensing costs, and lack of cohesive design systems.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📚</div>
+                                    <h4>UI Pattern Library Audit</h4>
+                                    <p>Systematically evaluated existing Uniface widgets against modern UI standards, identifying critical gaps in accessibility, responsiveness, and visual hierarchy.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔍</div>
+                                    <h4>Heuristic Analysis</h4>
+                                    <p>Applied Nielsen's usability heuristics to the current interface and IDE, discovering major violations in consistency, error prevention, and aesthetic design impacting productivity.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">⚔️</div>
+                                    <h4>Competitive Analysis</h4>
+                                    <p>Benchmarked against competing low-code platforms (OutSystems, Mendix, Microsoft Power Apps), identifying modern design systems and widget flexibility as key differentiators.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">👀</div>
+                                    <h4>Contextual Inquiry</h4>
+                                    <p>Observed users in their actual work environments, witnessing developers struggle with CSS conflicts and architects manually documenting custom widget integrations.</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Key Insights</h4>
+                            <ul class="case-list">
+                                <li>Architects needed scalable, maintainable systems with seamless integration</li>
+                                <li>Developers required rapid development without customization constraints</li>
+                                <li>UX designers sought design consistency and accessibility compliance</li>
+                                <li>End users needed intuitive, modern interfaces</li>
+                            </ul>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Design Principles</h4>
+                            <p>Based on our research, we established core principles:</p>
+                            <div class="features-grid" style="margin-top: 20px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">✨</div>
+                                    <h4>Clean & Simplified</h4>
+                                    <p>Consistent UI reducing cognitive load</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">♿</div>
+                                    <h4>Accessible</h4>
+                                    <p>WCAG-compliant design patterns</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">💬</div>
+                                    <h4>Feedback-Driven</h4>
+                                    <p>Mechanisms for continuous improvement</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔒</div>
+                                    <h4>Security-First</h4>
+                                    <p>Built-in compliance and data protection</p>
+                                </div>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Analysis: Design Collaborative Deliverables</h4>
+                            <ul class="case-list">
+                                <li>Created user flows for collaborative team alignment</li>
+                                <li>Developed information architecture prioritizing critical features</li>
+                                <li>Mapped user journeys across different roles and use cases</li>
+                            </ul>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Testing & Iteration</h4>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔬</div>
+                                    <h4>A/B Testing</h4>
+                                    <p>Compared component layouts and interaction patterns to optimize task completion rates.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">👥</div>
+                                    <h4>Usability Testing</h4>
+                                    <p>Observed users with prototypes, uncovering navigation confusion and data grid interaction issues.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">♿</div>
+                                    <h4>Accessibility Testing</h4>
+                                    <p>Validated WCAG compliance using automated tools and screen readers for keyboard navigation and ARIA labels.</p>
+                                </div>
+                            </div>
+
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Key Insights</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">Data grid states needed clearer differentiation; component repositioning reduced task time; IDE navigation required restructuring; documentation gaps slowed onboarding; accessibility improvements enhanced overall usability.</p>
+                            </div>
+
+                            <h4 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; color: var(--text-dark);">Critical Iteration Framework Pivot</h4>
+                            <p><strong>Initially designed as a closed widget library.</strong> Mid-project testing revealed customers needed custom widget creation for unique requirements. Pivoted to an open UX Widget Framework architecture, transforming the product from a limited library into a scalable platform becoming our core differentiator.</p>
+
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 15px; color: var(--text-dark);">Standard Iterations</h4>
+                            <ul class="case-list">
+                                <li>Repositioned components (40% less mouse travel)</li>
+                                <li>Simplified IDE navigation (5 clicks to 2)</li>
+                                <li>Enhanced documentation (4 hours to 45 min onboarding)</li>
+                                <li>Refined data grids (resolved 60% state confusion)</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Meet Our Users: Four Core Personas</h3>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <div class="step-number">👩‍💼</div>
+                                    <h4>Amy - Architect</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 8px;">Age: 40</p>
+                                    <p style="font-style: italic; color: var(--text-dark);">"Focus on scalability and system integration"</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👨‍💻</div>
+                                    <h4>Fabian - Developer</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 8px;">Age: 45</p>
+                                    <p style="font-style: italic; color: var(--text-dark);">"Need for rapid, cost-effective development"</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👩‍🎨</div>
+                                    <h4>Ursula - UX/UI Designer</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 8px;">Age: 30</p>
+                                    <p style="font-style: italic; color: var(--text-dark);">"Emphasis on user research and visual quality"</p>
+                                </div>
+                                <div class="process-step">
+                                    <div class="step-number">👩‍💼</div>
+                                    <h4>Nora - End User / Banker</h4>
+                                    <p style="font-size: 15px; color: var(--text-light); margin-bottom: 8px;">Age: 35</p>
+                                    <p style="font-style: italic; color: var(--text-dark);">"Requirement for efficient, secure software"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>The Solution</h3>
+                            <p>Uniface UX — a comprehensive low-code platform solution built on the Fluent Design System.</p>
+
+                            <div class="features-grid" style="margin-top: 30px;">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔧</div>
+                                    <h4>UX Widget Framework</h4>
+                                    <p>Custom communication layer between web components and Uniface.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Provides flexibility beyond default offerings, allowing developers to create custom widgets using any web component library while maintaining platform consistency.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📦</div>
+                                    <h4>Fluent-Based Widget Library</h4>
+                                    <p>Pre-built widgets leveraging open-source Fluent Web Components.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Eliminates the need for multiple third-party libraries, reduces costs, and provides a modern, cohesive UI out-of-the-box with Microsoft's proven design system.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🎨</div>
+                                    <h4>Flexible Style Adaptation</h4>
+                                    <p>Support for custom style guides with Fluent UI as default.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Each customer can maintain their brand identity while benefiting from the robust framework, providing both consistency and customization.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📈</div>
+                                    <h4>Scalable Architecture</h4>
+                                    <p>Enterprise-grade framework supporting web, mobile, and desktop applications.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Single platform deployment reduces development time and maintenance overhead while ensuring cross-platform consistency.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">💻</div>
+                                    <h4>Integrated Development Environment</h4>
+                                    <p>Repository-based IDE with ProcScript, JavaScript, XHTML, and CSS support.</p>
+                                    <p style="margin-top: 12px; font-weight: 600; color: var(--accent);">Why It Works: Familiar tools and languages reduce learning curves while the model-based approach accelerates development cycles.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section impact-section">
+                            <h3>Impact & Results</h3>
+                            
+                            <div class="impact-stats">
+                                <div class="impact-stat">
+                                    <div class="impact-number">100%</div>
+                                    <div class="impact-label">Cost Reduction (Licensing Fees Eliminated)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">65%</div>
+                                    <div class="impact-label">Faster Development Speed</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">80%</div>
+                                    <div class="impact-label">Maintenance Efficiency Improvement</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">70%</div>
+                                    <div class="impact-label">Cross-Platform Deployment Reduction</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">85%</div>
+                                    <div class="impact-label">Faster Developer Onboarding</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">40%</div>
+                                    <div class="impact-label">Task Efficiency (Mouse Travel)</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">55%</div>
+                                    <div class="impact-label">Code Reusability Increase</div>
+                                </div>
+                                <div class="impact-stat">
+                                    <div class="impact-number">45%</div>
+                                    <div class="impact-label">Faster Bug Resolution</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>User Feedback</h3>
+                            <div style="background: var(--bg-white); padding: 30px; border-radius: 12px; margin-top: 25px;">
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--accent);">Architects</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"The framework gives us flexibility with modern standards—no more choosing between consistency and customization."</p>
+                                </div>
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--accent);">Developers</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"Delivering applications 60% faster. Fluent components work beautifully, and custom widgets are straightforward."</p>
+                                </div>
+                                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border);">
+                                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--accent);">UX Designers</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"A cohesive design system we can finally work with. Accessibility is built-in, not an afterthought."</p>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--accent);">End Users</h4>
+                                    <p style="font-style: italic; color: var(--text-dark); font-size: 17px; line-height: 1.7;">"Cleaner, faster, and actually enjoyable. Navigation feels intuitive."</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Business Outcomes</h3>
+                            <ul class="case-list">
+                                <li>Achieved strategic objective of market repositioning as a modern low-code platform</li>
+                                <li>Resolved all identified pain points: style leakage (eliminated), costs (reduced by 100% for licenses), maintenance (80% less overhead)</li>
+                                <li>Enabled customer flexibility while maintaining platform consistency through framework approach</li>
+                                <li>Positioned Uniface competitively against OutSystems, Mendix, and Power Apps with modern UX capabilities</li>
+                                <li>Increased customer satisfaction scores by 42% in post-launch surveys</li>
+                                <li>Reduced support tickets related to UI/UX issues by 58% in first 6 months</li>
+                            </ul>
+                        </div>
+
+                        <div class="case-section">
+                            <h3>Key Learnings</h3>
+                            
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What Worked</h4>
+                            <ul class="case-list">
+                                <li><strong>User-Centered Research:</strong> Deep persona development and empathy mapping revealed critical pain points that directly informed feature prioritization</li>
+                                <li><strong>Open-Source Foundation:</strong> Leveraging Fluent Design System provided immediate credibility and reduced development time while eliminating licensing costs</li>
+                                <li><strong>Framework Approach:</strong> Building a flexible widget framework instead of rigid components gave customers the customization they needed</li>
+                                <li><strong>Collaborative Workflows:</strong> Early user flow creation aligned cross-functional teams and accelerated parallel development</li>
+                            </ul>
+
+                            <h4 style="font-size: 22px; margin-top: 30px; margin-bottom: 20px; color: var(--text-dark);">What to Improve</h4>
+                            <ul class="case-list">
+                                <li><strong>Documentation First:</strong> Developer documentation should be created alongside design, not after, to reduce onboarding friction</li>
+                                <li><strong>Mobile-First Thinking:</strong> Device responsiveness was deprioritized; future iterations should start with mobile constraints</li>
+                                <li><strong>Quantitative Metrics:</strong> Establish baseline metrics before launch to better measure impact and ROI</li>
+                                <li><strong>IDE Redesign:</strong> The existing IDE interface needs reconsideration to match the modern UX of the widget system</li>
+                            </ul>
+
+                            <div style="background: var(--bg-white); padding: 35px; border-radius: 12px; margin-top: 30px; border-left: 4px solid var(--accent);">
+                                <h4 style="font-size: 20px; margin-bottom: 15px;">Core Takeaway</h4>
+                                <p style="font-size: 17px; line-height: 1.7; margin-bottom: 15px;">Design systems succeed when they balance flexibility with consistency. Uniface UX's framework approach providing both pre-built components and the ability to create custom widgets solved the fundamental tension between standardization and customization. By choosing an established open-source design system (Fluent) and building a flexible integration layer, we eliminated technical debt while empowering customers to maintain their unique brand identities.</p>
+                                <p style="font-size: 17px; line-height: 1.7; margin: 0;">The key wasn't just solving today's problems (costs, style leakage, maintenance); it was creating a sustainable platform that adapts to future needs without requiring costly overhauls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Career Timeline -->
+    <section style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Journey</span>
+                <h2>Career Timeline</h2>
+            </div>
+            <div class="timeline-center">
+                <div class="timeline-item-center timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021 - Present</div>
+                        <h3>Senior User Experience Designer P4 / Project Lead</h3>
+                        <div class="timeline-company">Rocket Software</div>
+                        <p class="timeline-description">
+                            Architected design systems and led AI integration initiatives, driving innovation in enterprise software solutions 
+                            and establishing UX best practices across global teams.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item-center timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3>Senior UX / UI Consultant</h3>
+                        <div class="timeline-company">Adroient ITES / Hitachi Vantara</div>
+                        <p class="timeline-description">
+                            Led UX design for AI machine learning transmission monitoring system project, implementing cutting-edge 
+                            predictive analytics interfaces.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item-center timeline-left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2013 - 2021</div>
+                        <h3>Senior UX / UI Designer / Developer</h3>
+                        <div class="timeline-company">AIT Global India</div>
+                        <p class="timeline-description">
+                            Delivered transformative solutions generating $8M revenue across banking, financial services, e-commerce, 
+                            and healthcare sectors with focus on mobile experiences.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item-center timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2009 - 2013</div>
+                        <h3>Web Designer</h3>
+                        <div class="timeline-company">WIZETRON</div>
+                        <p class="timeline-description">
+                            Built foundation in digital design and web development, establishing core skills in user-centered design 
+                            and front-end development.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+            <div class="section-header">
+                
+                <h2>Education</h2>
+            </div>
+             <div class="timeline-center">
+                <div class="timeline-item-center timeline-left">
+                    <div class="timeline-content">
+                
+                        <div class="timeline-year"> 2019- 20121: UX Education</div>
+                        <h3>IxDF Interaction Design Foundation </h3>
+                        <div class="timeline-company">UX Management: Strategy and tactics</div>
+                       
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item-center timeline-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2013-2015: Education</div>
+                        <h3>Bachelor of Computer Application </h3>
+                        <div class="timeline-company">SunRise University, Alwar, Rajasthan.</div>
+                        
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2>Let's Connect</h2>
+                    <h3 class="contact-subheading">Ready to Transform Your Digital Experience?</h3>
+                    <p class="contact-text">
+                        With 14 years of expertise in Product, UX design and digital transformation, I bring strategic vision and proven results to every project. Let's collaborate to create innovative, human-centered solutions that drive business growth.
+                    </p>
+                    <div class="contact-buttons">
+                        <a href="#" class="btn btn-primary">
+                            Email Me
+                        </a>
+                        <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" class="btn btn-outline">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-info-card">
+                        <h4 class="contact-card-title">Contact Information</h4>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-label">Email:</div>
+                                <div class="contact-info-value">ismil.xyz@gmail.com</a></div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-label">Phone:</div>
+                                <div class="contact-info-value">+91 00000000</div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-label">Location:</div>
+                                <div class="contact-info-value">Pune, Maharashtra, India</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Ismil Nadaf. Crafted with passion for human-centered design.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scroll animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.competency-card, .project-card, .cert-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Project modal functions
+        function openProject(projectId) {
+            const modal = document.getElementById('projectModal');
+            const allProjects = document.querySelectorAll('.project-detail');
+            const selectedProject = document.getElementById(projectId);
+            
+            // Hide all projects
+            allProjects.forEach(project => {
+                project.classList.remove('active');
+            });
+            
+            // Show selected project
+            selectedProject.classList.add('active');
+            
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Scroll to top of modal
+            modal.scrollTop = 0;
+        }
+
+        function closeProject() {
+            const modal = document.getElementById('projectModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProject();
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProject();
+            }
+        });
+    </script>
+</body>
+</html>
