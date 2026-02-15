@@ -1579,7 +1579,7 @@
             letter-spacing: 1px;
         }
 
-        /* Responsive Modal */
+       /* Responsive Modal */
         @media (max-width: 768px) {
             .modal-close {
                 top: 20px;
@@ -1640,6 +1640,48 @@
 
             .impact-number {
                 font-size: 36px;
+            }
+
+            /* Responsive for custom inline 3-column grids (Key Insights, Testing Rounds, Personas) */
+            [style*="grid-template-columns: repeat(3, 1fr)"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Responsive for custom inline 2-column grids (Personas with 2 or 4 items) */
+            [style*="grid-template-columns: repeat(2, 1fr)"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Ensure circular badges stay properly sized on mobile */
+            [style*="width: 40px; height: 40px"] {
+                width: 36px !important;
+                height: 36px !important;
+                font-size: 14px !important;
+            }
+
+            /* Adjust font sizes in inline styled cards for mobile */
+            [style*="font-size: 18px"][style*="margin: 0"] {
+                font-size: 16px !important;
+            }
+
+            [style*="font-size: 48px"] {
+                font-size: 40px !important;
+            }
+        }
+
+        /* Tablet responsive styles */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            /* 2-column layout for 3-column grids on tablets */
+            [style*="grid-template-columns: repeat(3, 1fr)"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-stats {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
