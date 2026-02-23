@@ -38,7 +38,7 @@
         .hero {
             background: var(--gradient);
             color: var(--bg-white);
-            padding: 90px 20px 90px
+            padding: 90px 20px 90px;
             position: relative;
             overflow: hidden;
         }
@@ -63,6 +63,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
             position: relative;
             z-index: 1;
         }
@@ -884,7 +885,7 @@
 
         .contact-layout {
             display: flex;
-            gap: 160px;
+            gap: 80px;
             align-items: flex-start;
             padding: 40px 0;
         }
@@ -1686,6 +1687,214 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
+        /* =============================================
+           COMPREHENSIVE RESPONSIVE FIXES
+           ============================================= */
+
+        /* --- Small Mobile (max 480px) --- */
+        @media (max-width: 480px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+
+            .hero { padding: 60px 16px 50px; }
+
+            .hero-profile-section {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 24px;
+                align-items: center;
+            }
+
+            .profile-image {
+                width: 240px;
+                height: 240px;
+                border-radius: 50%;
+            }
+
+            .hero-description { font-size: 15px; }
+            .hero-subtitle { font-size: 16px; }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+
+            .stat-number { font-size: 30px; }
+
+            .contact-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .contact-buttons .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 14px;
+            }
+
+            section { padding: 48px 16px; }
+
+            .section-header { margin-bottom: 36px; }
+
+            .about-content-wrapper { gap: 28px; }
+            .about-image { height: 280px; }
+            .about-image-badge { padding: 12px 18px; bottom: 14px; left: 14px; }
+            .badge-number { font-size: 22px; }
+            .badge-text { font-size: 11px; }
+            .about-description { font-size: 15px; }
+
+            .about-highlights { grid-template-columns: 1fr; gap: 12px; }
+            .highlight-item { padding: 14px; gap: 12px; }
+            .highlight-icon { font-size: 24px; width: 40px; height: 40px; }
+            .highlight-content h4 { font-size: 15px; }
+            .highlight-content p { font-size: 13px; }
+
+            .competencies-grid { grid-template-columns: 1fr; gap: 16px; }
+            .competency-card { padding: 24px 20px; }
+
+            .cert-cards-grid { grid-template-columns: 1fr; gap: 16px; }
+            .cert-card { padding: 24px 20px; }
+
+            .tech-content-wrapper { gap: 28px; }
+            .tech-image { height: 240px; }
+            .tech-grid { grid-template-columns: 1fr; gap: 16px; }
+            .tech-category { padding: 20px; }
+
+            .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+            .project-content { padding: 20px; }
+
+            .timeline-center { padding: 20px 0; }
+            .timeline-item-center { padding-left: 40px; margin-bottom: 30px; }
+            .timeline-content { padding: 20px; }
+            .timeline-content h3 { font-size: 16px; }
+            .timeline-company { font-size: 14px; }
+            .timeline-description { font-size: 13px; }
+
+            .contact-section .container { padding: 0 16px; }
+            .contact-layout { gap: 28px; padding: 24px 0; }
+            .contact-left h2 { font-size: 26px; }
+            .contact-subheading { font-size: 16px; }
+            .contact-text { font-size: 15px; }
+
+            .case-study-content { padding: 30px 16px 50px; }
+            .case-section h3 { font-size: 22px; }
+            .impact-stats { grid-template-columns: 1fr; gap: 20px; }
+            .impact-section { padding: 24px 16px; }
+            .impact-number { font-size: 32px; }
+
+            .project-detail-hero { padding: 70px 16px 40px; }
+            .project-detail-hero h2 { font-size: 26px; }
+            .project-intro { font-size: 15px; }
+
+            .process-step { padding: 20px 18px; }
+            .step-number { font-size: 28px; }
+            .process-step h4 { font-size: 17px; }
+
+            .certifications-container { padding: 24px 16px; }
+        }
+
+        /* --- Standard Mobile (481px – 768px) --- */
+        @media (max-width: 768px) {
+            /* Hero profile already handled via existing rule but ensure image scales */
+            .profile-image {
+                width: min(300px, 80vw);
+                height: min(300px, 80vw);
+            }
+
+            /* Prevent hero stats from overflowing */
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            /* Fix contact buttons being too wide */
+            .contact-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            .contact-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Ensure inline grids collapse properly */
+            [style*="display: grid"][style*="grid-template-columns: repeat(4"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* Fix any fixed-width elements that could overflow */
+            .about-image-container,
+            .tech-image-container {
+                width: 100% !important;
+            }
+        }
+
+        /* --- Tablet (769px – 1024px) --- */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            h1 { font-size: 44px; }
+            h2 { font-size: 34px; }
+
+            .hero { padding: 80px 24px 70px; }
+
+            .hero-profile-section {
+                gap: 36px;
+            }
+
+            .profile-image {
+                width: 260px;
+                height: 310px;
+            }
+
+            .hero-description { font-size: 16px; }
+
+            .about-content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .about-image-container {
+                width: 100%;
+            }
+            .about-image { height: 380px; }
+            .about-highlights { grid-template-columns: repeat(2, 1fr); }
+
+            .competencies-grid { grid-template-columns: repeat(2, 1fr); }
+            .cert-cards-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .tech-content-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .tech-image-container { width: 100%; }
+            .tech-image { height: 340px; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .contact-layout { gap: 60px; }
+            .contact-right { width: 320px; }
+
+            .case-study-content { padding: 50px 32px 70px; }
+        }
+
+        /* --- Large Tablet / Small Desktop (1025px – 1280px) --- */
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .container { padding: 0 24px; }
+            .hero { padding: 90px 24px; }
+            .contact-layout { gap: 80px; }
+        }
+
+        /* --- Global overflow prevention --- */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        * {
+            min-width: 0; /* Fixes flex/grid children overflow */
+        }
     </style>
 </head>
 <body>
@@ -1708,17 +1917,15 @@
                                 <div class="stat-number">14</div>
                                 <div class="stat-label">Years of Digital Innovation</div>
                             </div>
-
                             <div class="stat">
                                 <div class="stat-number">Global</div>
                                 <div class="stat-label">Experience</div>
                             </div>
-                            <div class="contact-buttons">
-                       
-                        <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" target="_blank" class="btn btn-outline">
-                            LinkedIn Profile
-                        </a>
-                    </div>
+                        </div>
+                        <div style="margin-top: 30px;">
+                            <a href="https://www.linkedin.com/in/ismil-nadaf-a31b7529/" target="_blank" class="btn btn-outline">
+                                LinkedIn Profile
+                            </a>
                         </div>
                     </div>
                     <div class="profile-image-container">
@@ -3507,7 +3714,7 @@
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <div class="contact-info-label">Email:</div>
-                                <div class="contact-info-value">ismil.xyz@gmail.com</div>
+                                <div class="contact-info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f766c727673316766655f78727e7673317c7072">[email&#160;protected]</a></div>
                             </div>
                             <div class="contact-info-item">
                                 <div class="contact-info-label">Phone:</div>
@@ -3531,7 +3738,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Smooth scroll animations on scroll
         const observerOptions = {
             threshold: 0.1,
@@ -3597,14 +3804,4 @@
             if (e.target === this) {
                 closeProject();
             }
-        });
-
-        // Close modal with ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeProject();
-            }
-        });
-    </script>
-</body>
-</html>
+    
