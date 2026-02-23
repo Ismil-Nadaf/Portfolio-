@@ -1223,10 +1223,20 @@
             }
         }
 
-        /* Scroll animations */
-        .fade-in {
+        /* Scroll animations - elements start hidden via JS, not CSS */
+        .fade-in-ready {
             opacity: 0;
             transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-ready.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Legacy .fade-in class kept for compatibility */
+        .fade-in {
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
@@ -3738,70 +3748,82 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Smooth scroll animations on scroll
+    <script>
+        // ── Scroll fade-in animations ──────────────────────────────────
+        const animatedEls = document.querySelectorAll('.competency-card, .project-card, .cert-card');
+
+        // Add ready class so JS controls visibility (prevents stuck-invisible cards)
+        animatedEls.forEach(el => el.classList.add('fade-in-ready'));
+
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -60px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // animate once
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.competency-card, .project-card, .cert-card').forEach(el => {
-            observer.observe(el);
-        });
+        animatedEls.forEach(el => observer.observe(el));
 
-        // Smooth scrolling for anchor links
+        // ── Smooth scrolling for anchor links ─────────────────────────
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Project modal functions
+        // ── Project modal functions ────────────────────────────────────
         function openProject(projectId) {
             const modal = document.getElementById('projectModal');
-            const allProjects = document.querySelectorAll('.project-detail');
+            if (!modal) return;
+
+            // Hide all project details
+            document.querySelectorAll('.project-detail').forEach(p => p.classList.remove('active'));
+
+            // Show the selected project
             const selectedProject = document.getElementById(projectId);
-            
-            // Hide all projects
-            allProjects.forEach(project => {
-                project.classList.remove('active');
-            });
-            
-            // Show selected project
+            if (!selectedProject) {
+                console.warn('Project not found:', projectId);
+                return;
+            }
             selectedProject.classList.add('active');
-            
-            // Show modal
+
+            // Open modal
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
-            
-            // Scroll to top of modal
+
+            // Scroll modal to top
             modal.scrollTop = 0;
         }
 
         function closeProject() {
             const modal = document.getElementById('projectModal');
+            if (!modal) return;
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
 
-        // Close modal when clicking outside content
+        // Close modal by clicking backdrop
         document.getElementById('projectModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeProject();
-            }
-    
+            if (e.target === this) closeProject();
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeProject();
+        });
+    </script>
+</body>
+</html>
