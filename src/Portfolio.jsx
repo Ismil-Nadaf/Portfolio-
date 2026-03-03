@@ -84,7 +84,7 @@ const PROJECTS = [
     longDescription: "My mandate was to modernise Rocket Uniface's UX without breaking the mental models of long-standing power users, while making it approachable for a new generation of developers. I led the design system strategy — adopting Microsoft's Fluent Design System as the foundation, then building a custom widget framework on top that allowed organisations to extend the platform with their own branded components.",
     tags: ["Design System", "Fluent Design", "Enterprise UX", "Low-Code", "Figma"],
     accent: "#764ba2",
-    role: "Senior UX Designer P4 / Project Lead",
+    role: "Senior UX Designer P4 / Product design Lead",
     duration: "Ongoing (2021–Present)",
     team: "Rocket Software (Global team)",
     outcome: "65% faster development cycles and $15K–$50K annual licensing eliminated per client",
@@ -99,15 +99,15 @@ const PROJECTS = [
 ];
 
 const TIMELINE = [
-  { year: "2021 – Present", role: "Senior UX Designer P4 / Project Lead", company: "Rocket Software", note: "Architected design systems and led AI integration initiatives, driving innovation in enterprise software and establishing UX best practices across global teams." },
-  { year: "2021", role: "Senior UX / UI Consultant", company: "Adroient ITES / Hitachi Vantara", note: "Led UX design for an AI-powered high tension tower health monitoring system, implementing cutting-edge predictive analytics interfaces." },
+  { year: "2021 – Present", role: "Senior UX Designer P4 / Product design Lead", company: "Rocket Software", note: "Architected design systems and led AI integration initiatives, driving innovation in enterprise software and establishing UX best practices across global teams." },
+  { year: "2021", role: "Senior UX / UI Consultant/ Product design Lead", company: "Adroient ITES / Hitachi Vantara", note: "Led UX design for an AI-powered high tension tower health monitoring system, implementing cutting-edge predictive analytics interfaces." },
   { year: "2013 – 2021", role: "Senior UX / UI Designer / Developer", company: "AIT Global India", note: "Delivered transformative solutions generating $8M revenue across banking, financial services, e-commerce, and healthcare sectors with focus on mobile experiences." },
   { year: "2009 – 2013", role: "Web Designer", company: "WIZETRON", note: "Built foundation in digital design and web development, establishing core skills in user-centered design and front-end development." },
-  { year: "2019 – 2021", role: "IxDF — UX Management: Strategy and Tactics", company: "Interaction Design Foundation", note: "Certified in UX Management, Design Thinking, and Agile Methods for UX Design.", isEducation: true },
+  { year: "2019 – 2021", role: "IxDF — Human Computer Interaction and UX Managemt", company: "Interaction Design Foundation", note: "Certified in UX Management, Design Thinking, and Agile Methods for UX Design.", isEducation: true },
   { year: "2013 – 2015", role: "Bachelor of Computer Application", company: "SunRise University, Alwar, Rajasthan", note: "Foundation in computing, software development, and digital systems.", isEducation: true },
 ];
 
-const SKILLS = ["Figma", "Adobe XD", "Miro AI", "Locofy AI", "HTML", "CSS", "JavaScript", "Prompt Engineering", "Agentic UX", "Design Systems", "Usability Testing", "Accessibility"];
+const SKILLS = [ "Design Ops & Process", "UX Management", "Stakeholder Management", "Design Thinking", "Roadmap Strategy", "Data-Driven Design", "Research & Data Synthesis", "Competitive Analysis", "End-to-End Design","Journey Mapping", "wireframe & Rapid Prototyping", "Claude AI", "GitHub Copilot", "Hotjar", "Google Analytics", "Adobe Analytics", "Figma AI", "Adobe XD", "Miro AI", "Locofy AI", "Cursor AI", "VS Code", "Prompt Engineering", "Process Orchestrations", "AI Assisted Design", "Vibe Coding", "Conversational UX", "Design Systems", "Usability Testing", "Accessibility", "JAWS & Narrator", "HTML", "CSS", "Basic JavaScript", "Bootstrap", "WordPress"  ];
 
 export default function Portfolio() {
   const [active, setActive] = useState("hero");
@@ -581,7 +581,7 @@ function WeconnectCaseStudy() {
       {/* Section 3: The Journey */}
       <div style={cs.section} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: tealAccent }}>🔍 The Journey</p>
-        <h3 style={cs.sectionTitle}>How I Got There</h3>
+        <h3 style={cs.sectionTitle}>How We Got There</h3>
         <div style={cs.journeyGrid} className="cs-journey-grid">
           <div style={cs.journeyCard}>
             <div style={cs.journeyIcon}>⚡</div>
@@ -877,7 +877,7 @@ function WeconnectCaseStudy() {
       {/* Section 6: Key Learnings */}
       <div style={{ ...cs.section, background: "#f8fafc" }} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: tealAccent }}>💡 Key Learnings &amp; Reflection</p>
-        <h3 style={cs.sectionTitle}>What I Learned</h3>
+        <h3 style={cs.sectionTitle}>What We Learned</h3>
         <div style={cs.learningsGrid} className="cs-learnings-grid">
           <div style={cs.learningsCol}>
             <h4 style={{ ...cs.learningsColTitle, borderColor: tealAccent }}>What Worked</h4>
@@ -960,7 +960,7 @@ function DroneInspectionCaseStudy() {
       <div style={styles.detailStatsStrip} className="detail-stats-strip">
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Role</span>
-          <span style={styles.detailStatCellValue}>Senior UX / UI Consultant</span>
+          <span style={styles.detailStatCellValue}>Senior UX / UI Consultant / Product design Lead</span>
         </div>
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Duration</span>
@@ -1048,7 +1048,7 @@ function DroneInspectionCaseStudy() {
       {/* Section 3: The Journey */}
       <div style={cs.section} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: cyan }}>🔍 The Journey</p>
-        <h3 style={cs.sectionTitle}>How I Got There</h3>
+        <h3 style={cs.sectionTitle}>How We Got There</h3>
         <div style={cs.journeyGrid} className="cs-journey-grid">
           <div style={cs.journeyCard}>
             <div style={cs.journeyIcon}>⚡</div>
@@ -1344,7 +1344,7 @@ function DroneInspectionCaseStudy() {
       {/* Section 6: Key Learnings */}
       <div style={{ ...cs.section, background: "#f8fafc" }} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: cyan }}>💡 Key Learnings &amp; Reflection</p>
-        <h3 style={cs.sectionTitle}>What I Learned</h3>
+        <h3 style={cs.sectionTitle}>What We Learned</h3>
         <div style={cs.learningsGrid} className="cs-learnings-grid">
           <div style={cs.learningsCol}>
             <h4 style={{ ...cs.learningsColTitle, borderColor: cyan }}>What Worked</h4>
@@ -1428,7 +1428,7 @@ function RocketUnifaceCaseStudy() {
       <div style={styles.detailStatsStrip} className="detail-stats-strip">
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Role</span>
-          <span style={styles.detailStatCellValue}>Senior UX Designer P4 / Project Lead</span>
+          <span style={styles.detailStatCellValue}>Senior UX Designer P4 / Product design Lead</span>
         </div>
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Duration</span>
@@ -1522,7 +1522,7 @@ function RocketUnifaceCaseStudy() {
       {/* Section 3: The Journey */}
       <div style={cs.section} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: purple }}>🔍 The Journey</p>
-        <h3 style={cs.sectionTitle}>How I Got There</h3>
+        <h3 style={cs.sectionTitle}>How We Got There</h3>
         <div style={cs.journeyGrid} className="cs-journey-grid">
           <div style={cs.journeyCard}>
             <div style={cs.journeyIcon}>⚡</div>
@@ -1854,7 +1854,7 @@ function RocketUnifaceCaseStudy() {
       {/* Section 6: Key Learnings */}
       <div style={{ ...cs.section, background: "#f8fafc" }} className="cs-section">
         <p style={{ ...cs.sectionLabel, color: purple }}>💡 Key Learnings &amp; Reflection</p>
-        <h3 style={cs.sectionTitle}>What I Learned</h3>
+        <h3 style={cs.sectionTitle}>What We Learned</h3>
         <div style={cs.learningsGrid} className="cs-learnings-grid">
           <div style={cs.learningsCol}>
             <h4 style={{ ...cs.learningsColTitle, borderColor: purple }}>What Worked</h4>
@@ -2046,7 +2046,7 @@ function DocuBuilderCaseStudy() {
       {/* ── Section 3: The Journey ── */}
       <div style={cs.section} className="cs-section">
         <p style={cs.sectionLabel}>🔍 The Journey</p>
-        <h3 style={cs.sectionTitle}>How I Got There</h3>
+        <h3 style={cs.sectionTitle}>How We Got There</h3>
         <div style={cs.journeyGrid} className="cs-journey-grid">
           <div style={cs.journeyCard}>
             <div style={cs.journeyIcon}>⚡</div>
@@ -2298,7 +2298,7 @@ function DocuBuilderCaseStudy() {
       {/* ── Section 6: Key Learnings ── */}
       <div style={{ ...cs.section, background: "#f8fafc" }} className="cs-section">
         <p style={cs.sectionLabel}>💡 Key Learnings &amp; Reflection</p>
-        <h3 style={cs.sectionTitle}>What I Learned</h3>
+        <h3 style={cs.sectionTitle}>What We Learned</h3>
         <div style={cs.learningsGrid} className="cs-learnings-grid">
           <div style={cs.learningsCol}>
             <h4 style={cs.learningsColTitle}>What Worked</h4>
@@ -2653,6 +2653,7 @@ const css = `
     .section-pad { padding: 2.5rem 1.5rem 2rem !important; min-height: unset !important; }
     .footer-section { padding: 2.5rem 1.5rem 2rem !important; min-height: unset !important; }
     .hero-title { font-size: 2rem !important; }
+    .hero-scroll { display: none !important; }
     .about-grid { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
     .stats-row { flex-wrap: wrap !important; gap: 1.25rem !important; }
     .footer-meta { flex-direction: column !important; gap: 0.4rem !important; }
