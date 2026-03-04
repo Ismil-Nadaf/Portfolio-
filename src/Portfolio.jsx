@@ -63,7 +63,7 @@ const PROJECTS = [
     tags: ["Industrial UX", "Drone Technology", "AI Interface", "Field Research", "Figma"],
     accent: "#30cfd0",
     role: "Senior UX/UI Consultant",
-    duration: "6 months",
+    duration: "12 months",
     team: "12-Person Product Team",
     outcome: "75% faster inspections and 85% cost savings vs. helicopter surveys",
     highlights: [
@@ -964,7 +964,7 @@ function DroneInspectionCaseStudy() {
         </div>
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Duration</span>
-          <span style={styles.detailStatCellValue}>6 Months</span>
+          <span style={styles.detailStatCellValue}>12 Months</span>
         </div>
         <div className="detail-stat-cell" style={styles.detailStatCell}>
           <span style={styles.detailStatCellLabel}>Team</span>
