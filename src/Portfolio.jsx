@@ -800,7 +800,7 @@ function WeconnectCaseStudy() {
         <img
           src="/images/weconnect-mockup.png"
           alt="Case study mockup"
-          style={{ width: "100%", display: "block", objectFit: "cover" }}
+          style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
       </div>
 
@@ -1267,7 +1267,7 @@ function DroneInspectionCaseStudy() {
         <img
           src="/images/hmtdash-mockup.png"
           alt="Case study mockup"
-          style={{ width: "100%", display: "block", objectFit: "cover" }}
+          style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
       </div>
 
@@ -1773,7 +1773,7 @@ function RocketUnifaceCaseStudy() {
         <img
           src="/images/unifaceide-mockup.png"
           alt="Case study mockup"
-          style={{ width: "100%", display: "block", objectFit: "cover" }}
+          style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
       </div>
 
@@ -2250,7 +2250,7 @@ function DocuBuilderCaseStudy() {
         <img
           src="/images/apptura-mockup.png"
           alt="Case study mockup"
-          style={{ width: "100%", display: "block", objectFit: "cover" }}
+          style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
       </div>
 
