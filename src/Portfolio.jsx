@@ -20,7 +20,7 @@ const PROJECTS = [
     tags: ["Automation", "Financial Services", "Enterprise UX", "78% Time Savings"],
     accent: "#4facfe",
     role: "Lead UX Designer",
-    duration: "12 months",
+    duration: "18 months",
     team: "Cross-functional (UX, Dev, Compliance)",
     outcome: "78% faster document creation and $2.3M annual savings",
     highlights: [
@@ -42,7 +42,7 @@ const PROJECTS = [
     tags: ["AI-Powered", "No-Code Platform", "Conversational UI", "SaaS", "Figma"],
     accent: "#18ba89",
     role: "Product Designer",
-    duration: "9 months",
+    duration: "15 months",
     team: "4-person product team",
     outcome: "78% activation rate and 2,450 businesses onboarded in 3 months",
     highlights: [
@@ -497,7 +497,7 @@ function WeconnectCaseStudy() {
         </div>
         <div className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: "1px solid rgba(0,0,0,0.07)" }}>
           <span style={styles.detailStatCellLabel}>Duration</span>
-          <span style={styles.detailStatCellValue}>9 Months</span>
+          <span style={styles.detailStatCellValue}>15 Months</span>
         </div>
         <div className="detail-stat-cell" style={styles.detailStatCell}>
           <span style={styles.detailStatCellLabel}>Team</span>
@@ -1982,7 +1982,7 @@ function DocuBuilderCaseStudy() {
 
       {/* ── Stats Strip ── */}
       <div style={styles.detailStatsStrip} className="detail-stats-strip">
-        {[{ label: "Role", value: "Lead Product & UX Designer" }, { label: "Duration", value: "12 Months" }, { label: "Team", value: "8-Person Product Team" }].map((s, i) => (
+        {[{ label: "Role", value: "Lead Product & UX Designer" }, { label: "Duration", value: "18 Months" }, { label: "Team", value: "8-Person Product Team" }].map((s, i) => (
           <div key={s.label} className="detail-stat-cell" style={{ ...styles.detailStatCell, borderRight: i < 2 ? "1px solid rgba(0,0,0,0.07)" : "none" }}>
             <span style={styles.detailStatCellLabel}>{s.label}</span>
             <span style={styles.detailStatCellValue}>{s.value}</span>
