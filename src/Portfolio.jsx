@@ -100,7 +100,7 @@ const PROJECTS = [
 
 const TIMELINE = [
   { year: "2021 – Present", role: "Senior UX Designer P4 / Product design Lead", company: "Rocket Software", note: "Architected design systems and led AI integration initiatives, driving innovation in enterprise software and establishing UX best practices across global teams." },
-  { year: "2021", role: "Senior UX / UI Consultant/ Product design Lead", company: "Adroient ITES / Hitachi Vantara", note: "Led UX design for an AI-powered high tension tower health monitoring system, implementing cutting-edge predictive analytics interfaces." },
+  { year: "2021 – 2021",role: "Senior UX / UI Consultant/ Product design Lead", company: "Adroient ITES / Hitachi Vantara", note: "Led UX design for an AI-powered high tension tower health monitoring system, implementing cutting-edge predictive analytics interfaces." },
   { year: "2013 – 2021", role: "Senior UX / UI Designer / Developer", company: "AIT Global India", note: "Delivered transformative solutions generating $8M revenue across banking, financial services, e-commerce, and healthcare sectors with focus on mobile experiences." },
   { year: "2013 – 2013", role: "Web Designer", company: "WIZETRON", note: "Built foundation in digital design and web development, establishing core skills in user-centered design and front-end development." },
   { year: "2019 – 2021", role: "IxDF — Human Computer Interaction and UX Managemt", company: "Interaction Design Foundation", note: "Certified in UX Management, Design Thinking, and Agile Methods for UX Design.", isEducation: true },
@@ -2521,8 +2521,8 @@ const styles = {
   projectTag: { padding: "0.25rem 0.6rem", fontSize: "0.65rem", fontFamily: "'DM Mono', monospace", color: "#666", letterSpacing: "0.05em", transition: "background 0.25s" },
   timeline: { display: "flex", flexDirection: "column" },
   timelineItem: { display: "flex", gap: "2.5rem", paddingBottom: "2.25rem" },
-  timelineLeft: { display: "flex", flexDirection: "column", alignItems: "center", width: "56px", minWidth: "56px" },
-  timelineYear: { fontSize: "0.82rem", fontFamily: "'DM Sans', sans-serif", color: "#444", fontWeight: 500, letterSpacing: "0.01em", marginBottom: "0.75rem", textAlign: "center", lineHeight: 1.4 },
+  timelineLeft: { display: "flex", flexDirection: "column", alignItems: "center", width: "90px", minWidth: "90px" },
+  timelineYear: { fontSize: "0.82rem", fontFamily: "'DM Sans', sans-serif", color: "#444", fontWeight: 500, letterSpacing: "0.01em", marginBottom: "0.75rem", textAlign: "center", lineHeight: 1.4, whiteSpace: "nowrap"},
   timelineLine: { flex: 1, width: "1px", background: "rgba(0,0,0,0.1)", minHeight: "30px" },
   timelineRight: { display: "flex", flexDirection: "column", paddingBottom: "0.5rem" },
   timelineRole: { fontSize: "1.08rem", fontWeight: 500, marginBottom: "0.2rem" },
