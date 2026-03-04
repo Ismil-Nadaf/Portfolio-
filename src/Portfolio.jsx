@@ -64,7 +64,7 @@ const PROJECTS = [
     accent: "#30cfd0",
     role: "Senior UX/UI Consultant",
     duration: "6 months",
-    team: "Adroient ITES / Hitachi Vantara",
+    team: "12-Person Product Team",
     outcome: "75% faster inspections and 85% cost savings vs. helicopter surveys",
     highlights: [
       "75% faster inspection cycles vs. traditional methods",
@@ -102,7 +102,7 @@ const TIMELINE = [
   { year: "2021 – Present", role: "Senior UX Designer P4 / Product design Lead", company: "Rocket Software", note: "Architected design systems and led AI integration initiatives, driving innovation in enterprise software and establishing UX best practices across global teams." },
   { year: "2021", role: "Senior UX / UI Consultant/ Product design Lead", company: "Adroient ITES / Hitachi Vantara", note: "Led UX design for an AI-powered high tension tower health monitoring system, implementing cutting-edge predictive analytics interfaces." },
   { year: "2013 – 2021", role: "Senior UX / UI Designer / Developer", company: "AIT Global India", note: "Delivered transformative solutions generating $8M revenue across banking, financial services, e-commerce, and healthcare sectors with focus on mobile experiences." },
-  { year: "2009 – 2013", role: "Web Designer", company: "WIZETRON", note: "Built foundation in digital design and web development, establishing core skills in user-centered design and front-end development." },
+  { year: "2013 – 2013", role: "Web Designer", company: "WIZETRON", note: "Built foundation in digital design and web development, establishing core skills in user-centered design and front-end development." },
   { year: "2019 – 2021", role: "IxDF — Human Computer Interaction and UX Managemt", company: "Interaction Design Foundation", note: "Certified in UX Management, Design Thinking, and Agile Methods for UX Design.", isEducation: true },
   { year: "2013 – 2015", role: "Bachelor of Computer Application", company: "SunRise University, Alwar, Rajasthan", note: "Foundation in computing, software development, and digital systems.", isEducation: true },
 ];
@@ -924,7 +924,7 @@ function DroneInspectionCaseStudy() {
         <div style={cs.heroInner}>
           <span style={{ ...cs.pill, background: "rgba(48,207,208,0.2)", border: "1px solid rgba(48,207,208,0.4)", color: "#b2fafa" }}>Industrial UX · AI Interface · Field Technology</span>
           <h2 style={cs.heroTitle}>Drone-Based Tower Health Inspection</h2>
-          <p style={cs.heroSub}>Adroient ITES / Hitachi Vantara — AI-Powered Infrastructure Monitoring</p>
+          <p style={cs.heroSub}>HIBI — AI-Powered Infrastructure Monitoring</p>
           <p style={{ ...cs.heroTagline, color: "#30cfd0" }}>75% Faster Inspections &amp; 85% Cost Savings vs. Helicopter Surveys</p>
           <div style={cs.resultBand}>
             <p style={cs.resultText}>
@@ -968,7 +968,7 @@ function DroneInspectionCaseStudy() {
         </div>
         <div className="detail-stat-cell" style={styles.detailStatCell}>
           <span style={styles.detailStatCellLabel}>Team</span>
-          <span style={styles.detailStatCellValue}>Adroient ITES / Hitachi Vantara</span>
+          <span style={styles.detailStatCellValue}>12-Person Product Team</span>
         </div>
       </div>
 
