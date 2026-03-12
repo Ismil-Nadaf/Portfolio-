@@ -798,7 +798,7 @@ function WeconnectCaseStudy() {
       {/* Full-width case study image */}
       <div style={{ width: "100%", margin: "0 0 0 0", lineHeight: 0 }}>
         <img
-          src="/images/weconnect-mockup.png"
+          src="#"
           alt="Case study mockup"
           style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
@@ -1265,7 +1265,7 @@ function DroneInspectionCaseStudy() {
       {/* Full-width case study image */}
       <div style={{ width: "100%", margin: "0 0 0 0", lineHeight: 0 }}>
         <img
-          src="/images/hmtdash-mockup.png"
+          src="#"
           alt="Case study mockup"
           style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
@@ -1771,7 +1771,7 @@ function RocketUnifaceCaseStudy() {
       {/* Full-width case study image */}
       <div style={{ width: "100%", margin: "0 0 0 0", lineHeight: 0 }}>
         <img
-          src="/images/unifaceide-mockup.png"
+          src="#"
           alt="Case study mockup"
           style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
@@ -2248,7 +2248,7 @@ function DocuBuilderCaseStudy() {
       {/* Full-width case study image */}
       <div style={{ width: "100%", margin: "0 0 0 0", lineHeight: 0 }}>
         <img
-          src="/images/apptura-mockup.png"
+          src="#"
           alt="Case study mockup"
           style={{ width: "100%", padding: "0px 80px 0px 80px", display: "block", objectFit: "cover" }}
         />
@@ -2328,6 +2328,8 @@ function DocuBuilderCaseStudy() {
     </div>
   );
 }
+
+
 
 /* ─── Sub-components ──────────────────────────────────────── */
 function SectionLabel({ label }) {
